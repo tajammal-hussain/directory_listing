@@ -886,8 +886,31 @@ So, next time you face a plumbing problem, don't panic - Clica Plumbers is just 
 <div class="checkbox" style="display: inline-block;"><label class="unselectable"><input id="chkAlreadyDelivered" type="checkbox" checked=""> Natisni artikle iz privzete ponudbe</label></div> -->
                 <div class="" style="width: 250px; display: flex; align-items: center; justify-content: space-around;">
                     <span style="font-weight: bolder;">Status</span>
-                    <input type="checkbox" id="Check1" value="Show" onclick="selectOnlyThis(this.id)" >Show</input>
-                    <input type="checkbox" id="Check2" value="Hide" onclick="selectOnlyThis(this.id)" >Hide</input>
+                    <!-- <input type="checkbox" id="Check1" value="Show" onclick="selectOnlyThis(this.id)" >Show</input>
+                    <input type="checkbox" id="Check2" value="Hide" onclick="selectOnlyThis(this.id)" >Hide</input> -->
+                    <div class="custom-control custom-radio">
+                      <input
+                        class="custom-control-input custom-control-input-danger custom-control-input-outline"
+                        type="radio"
+                        id="customRadio5"
+                        name="customRadio2"
+                      />
+                      <label for="customRadio5" class="custom-control-label"
+                        >show</label
+                      >
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input
+                        class="custom-control-input custom-control-input-danger custom-control-input-outline"
+                        type="radio"
+                        id="customRadio4"
+                        name="customRadio2"
+                      />
+                      <label for="customRadio4" class="custom-control-label"
+                        >hide</label
+                      >
+                    </div>
+                  
                 </div>
         
         <!-- /.col-->
@@ -951,6 +974,8 @@ So, next time you face a plumbing problem, don't panic - Clica Plumbers is just 
 <script src="../../plugins/codemirror/mode/css/css.js"></script>
 <script src="../../plugins/codemirror/mode/xml/xml.js"></script>
 <script src="../../plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<!-- bs-custom-file-input -->
+<script src="../../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
 <!-- Page specific script -->
