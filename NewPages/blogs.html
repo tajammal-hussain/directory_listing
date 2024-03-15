@@ -1622,31 +1622,6 @@
                                             class="tab-pane active"
                                             id="tab_1"
                                         >
-                                            <!-- card-header -->
-
-                                            <div class="card-tools">
-                                                <div
-                                                    class="input-group input-group-lg"
-                                                    style="width: 300px;"
-                                                >
-                                                    <div class="input-group-append">
-                                                        <button
-                                                            type="submit"
-                                                            class="btn btn-default"
-                                                        >
-                                                            <i class="fas fa-search"></i>
-                                                        </button>
-                                                    </div>
-
-                                                    <input
-                                                        type="text"
-                                                        name="table_search"
-                                                        class="form-control float-right"
-                                                        placeholder="Search"
-                                                    ></input>
-                                                </div>
-                                            </div>
-
                                             <table
                                                 id="example2"
                                                 class="table table-bordered table-hover"
@@ -1914,7 +1889,6 @@
     </div>
 
     <!-- /.content-wrapper -->
-
     <!-- Control Sidebar -->
 
     <aside class="control-sidebar control-sidebar-dark">
@@ -1956,16 +1930,15 @@
     <script>
         $(function () {
             $("#example1").DataTable({
-                "responsive": true, "lengthChange": false, "autoWidth": false,
-                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+                "responsive": true, "lengthChange": true, "autoWidth": true
             }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
             $('#example2').DataTable({
                 "paging": true,
-                "lengthChange": false,
-                "searching": false,
+                "lengthChange": true,
+                "searching": true,
                 "ordering": true,
                 "info": true,
-                "autoWidth": false,
+                "autoWidth": true,
                 "responsive": true,
             });
         });
@@ -1974,13 +1947,10 @@
     <script>
         $(function () {
         // Summernote
-        $('#summernote').summernote()
-    
-        // CodeMirror
-        CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
-          mode: "htmlmixed",
-          theme: "monokai"
-        });
+        $('#summernote').summernote({
+            height: 300,   //set editable area's height
+        })
+        
       })
     </script>
 </body>
