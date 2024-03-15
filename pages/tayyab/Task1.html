@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Blank Page</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+</head>
+          <style>
+            .headTop{
+              margin-left: 10px;
+              font-size: larger;
+            }
+            
+          </style>
+<body class="hold-transition sidebar-mini">
+     <div>
+    <br><label class="headTop">Edit payment setting</label>              
+    </div>                          
+       <!-- Main content -->
+       <section class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+              <!-- jquery validation -->
+              <div class="card card-primary ">
+                <div class="card-header">
+                  <h3 class="card-title"> <small>PayPal</small></h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form id="quickForm">
+                  <div class="card-body">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Paypal Environment</label>
+                        <field>
+                            <select class="form-control select2" style="width: 100%;">
+                                <option selected="selected">Alabama</option>
+                                <option>Alaska</option>
+                                <option>California</option>
+                                <option>Delaware</option>
+                                <option>Tennessee</option>
+                                <option>Washington</option>
+                            <option>Texas</option></select>
+                            
+                        </field>
+
+                      <label for="exampleInputEmail1">Paypal Client it</label>
+                      <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter here">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Paypal Secret key</label>
+                      <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="put here">
+                    </div>
+                    <div class="form-group mb-0">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" name="terms" class="custom-control-input" id="exampleCheck1">
+                        
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            </div>
+            </div>
+            </section>
+          
+              <section class="content">
+                <div class="container-fluid">
+                  <div class="row">
+                    <!-- left column -->
+                    <div class="col-md-12">
+                      <!-- jquery validation -->
+                      <div class="card card-primary">
+                        <div class="card-header">
+                          <h3 class="card-title"> <small>Stripe</small></h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form id="quickForm">
+                          <div class="card-body">
+                            <div class="form-group">
+                              
+        
+                              <label for="exampleInputEmail1">Stripe public key</label>
+                              <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter here">
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputPassword1">stripe Secret key</label>
+                              <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="put here">
+                            </div>
+                            <div class="form-group mb-0">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" name="terms" class="custom-control-input" id="exampleCheck1">
+                                
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>            
+             </div>
+             </div>                            
+             </div>
+              <button type="button" class="btn btn-block btn-success">Submit</button>
+          
+           
+</body>
+</html>
