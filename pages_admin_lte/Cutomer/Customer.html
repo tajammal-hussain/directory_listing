@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<primary lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AdminLTE 3 | Editors</title>
+    <title>AdminLTE 3 | DataTables</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link
@@ -15,18 +15,21 @@
       rel="stylesheet"
       href="../../plugins/fontawesome-free/css/all.min.css"
     />
-    <!-- Theme style -->
-    <link rel="stylesheet" href="../../dist/css/adminlte.min.css" />
-    <!-- summernote -->
+    <!-- DataTables -->
     <link
       rel="stylesheet"
-      href="../../plugins/summernote/summernote-bs4.min.css"
+      href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css"
     />
-    <!-- CodeMirror -->
-    <link rel="stylesheet" href="../../plugins/codemirror/codemirror.css" />
-    <link rel="stylesheet" href="../../plugins/codemirror/theme/monokai.css" />
-    <!-- SimpleMDE -->
-    <link rel="stylesheet" href="../../plugins/simplemde/simplemde.min.css" />
+    <link
+      rel="stylesheet"
+      href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css"
+    />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css" />
   </head>
   <body class="hold-transition sidebar-mini">
     <div class="wrapper">
@@ -471,8 +474,8 @@
                   </li>
                 </ul>
               </li>
-              <li class="nav-item menu-open">
-                <a href="#" class="nav-link active">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
                   <i class="nav-icon fas fa-edit"></i>
                   <p>
                     Forms
@@ -493,7 +496,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="../forms/editors.html" class="nav-link active">
+                    <a href="../forms/editors.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Editors</p>
                     </a>
@@ -506,8 +509,8 @@
                   </li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link active">
                   <i class="nav-icon fas fa-table"></i>
                   <p>
                     Tables
@@ -522,7 +525,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="../tables/data.html" class="nav-link">
+                    <a href="../tables/data.html" class="nav-link active">
                       <i class="far fa-circle nav-icon"></i>
                       <p>DataTables</p>
                     </a>
@@ -935,13 +938,7 @@
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1>Edit FAQ Page Information</h1>
-              </div>
-              <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
-                  <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item active">Faq Page Info</li>
-                </ol>
+                <h1>Customers</h1>
               </div>
             </div>
           </div>
@@ -950,125 +947,166 @@
 
         <!-- Main content -->
         <section class="content">
-          <div>
-            <div class="card-title">Name</div>
-            <input
-              type="text"
-              class="form-control mb-4"
-              placeholder="FAQ"
-              aria-label="Username"
-              aria-describedby="basic-addon1"
-            />
-          </div>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <!-- /.card -->
 
-          <!-- /.card-header -->
-          <div class="card-body" style="padding: 0%">
-            <span style="font-size: large">Details</span>
-            <textarea id="summernote">
- 
-                Place <em>some</em> <u>text</u> <strong>here</strong><br />
-                <strong>3) Are there any special rates or discounts available?</strong><br />
-For plumbers listed here, we offer a special 25% discount voucher to work with a Local Business Agency we partnered with. For customers, there may be some plumbers who offer discounts, bundled service packages, or special promotions. You can browse individual plumber profiles to find deals relevant to you.<br />
-<strong>4)What types of plumbing services do the listed companies offer?</strong> <br />
-Plumbers listed here offer a full range of services like repairs, installations, maintenance, gas work, drainage, etc.<br />
-<strong>5) What should I do in a plumbing emergency?</strong><br />
-Emergencies can be stressful. Just use our filter on the Listing page and search for plumbers in your area or nearby. There will be many who offer emergency services.<br />
-
-              </textarea
-            >
-          </div>
-
-          <!-- <div class="checkbox" style="display: inline-block;"><label class="unselectable"><input id="chkAlreadyDelivered" type="checkbox" checked=""> Skrij že oddane količine</label></div>
-<button class="btn btn-primary" style="display: inline-block;">Natisni</button>
-<div class="checkbox" style="display: inline-block;"><label class="unselectable"><input id="chkAlreadyDelivered" type="checkbox" checked=""> Natisni artikle iz privzete ponudbe</label></div> -->
-          <div
-            class=""
-            style="
-              width: 250px;
-              display: flex;
-              align-items: center;
-              justify-content: space-around;
-            "
-          >
-            <span style="font-weight: bolder">Status</span>
-            <!-- <input type="checkbox" id="Check1" value="Show" onclick="selectOnlyThis(this.id)" >Show</input>
-                    <input type="checkbox" id="Check2" value="Hide" onclick="selectOnlyThis(this.id)" >Hide</input> -->
-            <div class="custom-control custom-radio">
-              <input
-                class="custom-control-input custom-control-input-primary custom-control-input-outline"
-                type="radio"
-                id="customRadio5"
-                name="customRadio2"
-              />
-              <label for="customRadio5" class="custom-control-label"
-                >show</label
-              >
-            </div>
-            <div class="custom-control custom-radio">
-              <input
-                class="custom-control-input custom-control-input-primary custom-control-input-outline"
-                type="radio"
-                id="customRadio4"
-                name="customRadio2"
-              />
-              <label for="customRadio4" class="custom-control-label"
-                >hide</label
-              >
-            </div>
-          </div>
-
-          <!-- /.col-->
-
-          <!-- ./row -->
-          <div class="row">
-            <div class="col-md-12">
-              <div class="card" style="margin-top: 4px">
-                <div>
-                  <span
-                    style="
-                      color: #5480d7;
-                      padding-left: 2px;
-                      background-color: #f1f1f1;
-                      display: block;
-                      height: 35px;
-                      font-size: large;
-                      display: flex;
-                      justify-content: center;
-                    "
-                  >
-                    SEO Information
-                  </span>
+                <div class="card">
+                  <div class="card-header" style="text-align: end">
+                    <button type="button" class="btn btn-primary">
+                      <i class="fa fa-plus"></i> Add New
+                    </button>
+                  </div>
+                  <!-- /.card-header -->
+                  <div class="card-body">
+                    <table
+                      id="example1"
+                      class="table table-bordered table-striped"
+                    >
+                      <thead>
+                        <tr>
+                          <th>Serial</th>
+                          <th>Photo</th>
+                          <th>Name</th>
+                          <th>Email</th>
+                          <th>Status</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td><img src="" alt="image" /></td>
+                          <td>sad z</td>
+                          <td>example@gmail.com</td>
+                          <td>
+                            <div class="card-body">
+                              <input
+                                type="checkbox"
+                                name="my-checkbox"
+                                checked
+                                data-on-Text="Active"
+                                data-off-Text="Pending"
+                                data-bootstrap-switch
+                                data-off-color="danger"
+                                data-on-color="success"
+                              />
+                            </div>
+                          </td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-block bg-gradient-secondary"
+                            >
+                              Edit User
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-block bg-gradient-info"
+                            >
+                              Details
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-block bg-gradient-danger"
+                            >
+                              Delete
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td><img src="" alt="image" /></td>
+                          <td>sad z</td>
+                          <td>salman@gmail.com</td>
+                          <td>
+                            <div class="card-body">
+                              <input
+                                type="checkbox"
+                                name="my-checkbox"
+                                checked
+                                data-on-Text="Active"
+                                data-off-Text="Pending"
+                                data-bootstrap-switch
+                                data-off-color="danger"
+                                data-on-color="success"
+                              />
+                            </div>
+                          </td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-block bg-gradient-secondary"
+                            >
+                              Edit Users
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-block bg-gradient-info"
+                            >
+                              Details
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-block bg-gradient-danger"
+                            >
+                              Delete
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td><img src="" alt="image" /></td>
+                          <td>sad z</td>
+                          <td>asdf@gmail.com</td>
+                          <td>
+                            <div class="card-body">
+                              <input
+                                type="checkbox"
+                                name="my-checkbox"
+                                checked
+                                data-on-Text="Active"
+                                data-off-Text="Pending"
+                                data-bootstrap-switch
+                                data-off-color="danger"
+                                data-on-color="success"
+                              />
+                            </div>
+                          </td>
+                          <td>
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-block bg-gradient-secondary"
+                            >
+                              Edit Users
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-block bg-gradient-info"
+                            >
+                              Details
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-sm btn-block bg-gradient-danger"
+                            >
+                              Delete
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- /.card-body -->
                 </div>
-                <div class="card-header">
-                  <label for="Title">Title</label>
-                  <input
-                    type="text"
-                    class="form-control mb-4"
-                    width="50%"
-                    placeholder="FAQ"
-                    aria-label="FAQ"
-                    aria-describedby="basic-addon1"
-                  />
-                  <label for="Meta">Meta Discription</label>
-                  <textarea
-                    class="form-control mb-4"
-                    width="50%"
-                    style="height: 150px"
-                    placeholder="FAQ Meta Discription"
-                    aria-label="meta"
-                    aria-describedby="basic-addon1"
-                  >
-                  </textarea>
-                </div>
-                <div class="card-header">
-                  <button type="submit" class="btn btn-success">Update</button>
-                </div>
-                <!-- /.card-header -->
+                <!-- /.card -->
               </div>
+              <!-- /.col -->
             </div>
-            <!-- /.col-->
+            <!-- /.row -->
           </div>
-          <!-- ./row -->
+          <!-- /.container-fluid -->
         </section>
         <!-- /.content -->
       </div>
@@ -1094,43 +1132,37 @@ Emergencies can be stressful. Just use our filter on the Listing page and search
     <script src="../../plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
     <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables  & Plugins -->
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+    <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="../../plugins/jszip/jszip.min.js"></script>
+    <script src="../../plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="../../plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
     <!-- AdminLTE App -->
     <script src="../../dist/js/adminlte.min.js"></script>
-    <!-- Summernote -->
-    <script src="../../plugins/summernote/summernote-bs4.min.js"></script>
-    <!-- CodeMirror -->
-    <script src="../../plugins/codemirror/codemirror.js"></script>
-    <script src="../../plugins/codemirror/mode/css/css.js"></script>
-    <script src="../../plugins/codemirror/mode/xml/xml.js"></script>
-    <script src="../../plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="../../dist/js/demo.js"></script>
     <!-- Page specific script -->
     <script>
       $(function () {
-        // Summernote
-        $("#summernote").summernote({
-          height: 300, // set min-height to 300px
+        $("#example1").DataTable({
+          responsive: true,
+          lengthChange: true,
+          autoWidth: false,
+          Selection: true,
         });
-
-        // CodeMirror
-        CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
-          mode: "htmlmixed",
-          theme: "monokai",
+        $("input[data-bootstrap-switch]").each(function () {
+          $(this).bootstrapSwitch("state", $(this).prop("checked"));
         });
       });
-      function selectOnlyThis(id) {
-        for (var i = 1; i <= 4; i++) {
-          if (
-            "Check" + i === id &&
-            document.getElementById("Check" + i).checked === true
-          ) {
-            document.getElementById("Check" + i).checked = true;
-          } else {
-            document.getElementById("Check" + i).checked = false;
-          }
-        }
-      }
     </script>
   </body>
-</primary
+</html>
