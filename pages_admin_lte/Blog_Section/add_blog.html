@@ -8,7 +8,7 @@
         content="width=device-width, initial-scale=1"
     ></meta>
 
-    <title>AdminLTE 3 | DataTables</title>
+    <title>AdminLTE 3 | Blogs</title>
 
     <!-- Google Font: Source Sans Pro -->
 
@@ -41,11 +41,32 @@
         href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css"
     ></link>
 
+    <!-- Toastr -->
+
+    <link
+        rel="stylesheet"
+        href="../../plugins/toastr/toastr.min.css"
+    ></link>
+
     <!-- Theme style -->
 
     <link
         rel="stylesheet"
         href="../../dist/css/adminlte.min.css"
+    ></link>
+
+    <!-- summernote -->
+
+    <link
+        rel="stylesheet"
+        href="../../plugins/summernote/summernote-bs4.min.css"
+    ></link>
+
+    <!-- SweetAlert2 -->
+
+    <link
+        rel="stylesheet"
+        href="../../plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css"
     ></link>
 </head>
 
@@ -1544,7 +1565,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Categories</h1>
+                            <h1>Blogs</h1>
                         </div>
 
                         <div class="col-sm-6">
@@ -1553,7 +1574,7 @@
                                     <a href="#">Home</a>
                                 </li>
 
-                                <li class="breadcrumb-item active">Categories</li>
+                                <li class="breadcrumb-item active">Blogs</li>
                             </ol>
                         </div>
                     </div>
@@ -1569,14 +1590,17 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <div class="card-header d-flex p-2" style="display: flex; justify-content: end;">
+                                <div
+                                    class="card-header d-flex p-2"
+                                    style="display: flex; justify-content: end;"
+                                >
                                     <a
                                         class="bg-primary rounded text-white py-1 px-2"
                                         href="#"
                                     >
                                         <span class="fs-3 fw-bold">
                                             <i class="fa fa-plus"></i>
-                                            Add New
+                                            View All
                                         </span>
                                     </a>
                                 </div>
@@ -1584,123 +1608,204 @@
                                 <!-- /.card-header -->
 
                                 <div class="card-body">
-                                    <table
-                                        id="example2"
-                                        class="table table-bordered table-hover"
-                                    >
-                                        <thead>
-                                            <tr>
-                                                <th>Serial</th>
+                                    <div class="form-group">
+                                        <label
+                                            for="inputClientCompany"
+                                            class="text-muted"
+                                        >Title *</label>
 
-                                                <th>Name</th>
+                                        <input
+                                            type="text"
+                                            id="inputClientCompany"
+                                            class="form-control"
+                                        ></input>
+                                    </div>
 
-                                                <th>Slug</th>
+                                    <div class="form-group">
+                                        <label
+                                            for="inputProjectLeader"
+                                            class="text-muted"
+                                        >Slug</label>
 
-                                                <th>Action</th>
-                                            </tr>
-                                        </thead>
+                                        <input
+                                            type="text"
+                                            id="inputProjectLeader"
+                                            class="form-control"
+                                        ></input>
+                                    </div>
 
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
+                                    <div class="form-group">
+                                        <label
+                                            for="inputContent"
+                                            class="text-muted"
+                                        >Content *</label>
 
-                                                <td>Test 1</td>
+                                        <textarea
+                                            id="summernote"
+                                            style="display: none;"
+                                        >
+                                            Place &lt;em&gt;some&lt;/em&gt; &lt;u&gt;text&lt;/u&gt; &lt;strong&gt;here&lt;/strong&gt;
+                                        </textarea>
+                                    </div>
 
-                                                <td>Test 1</td>
+                                    <div class="form-group">
+                                        <label
+                                            for="inputShortDescription"
+                                            class="text-muted"
+                                        >
+                                            Short Content
+                                                        *
+                                        </label>
 
-                                                <td class="project-actions text-left">
-                                                    <a
-                                                        class="btn btn-info btn-sm"
-                                                        href="#"
-                                                    >
-                                                        <i class="fas fa-pencil-alt"></i>
-                                                    </a>
+                                        <textarea
+                                            id="inputDescription"
+                                            class="form-control"
+                                            rows="4"
+                                        ></textarea>
+                                    </div>
 
-                                                    <a
-                                                        class="btn btn-danger btn-sm"
-                                                        href="#"
-                                                    >
-                                                        <i class="fas fa-trash"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
+                                    <div class="form-group">
+                                        <label
+                                            for="exampleInputFile"
+                                            class="text-muted"
+                                        >Photo</label>
 
-                                            <tr>
-                                                <td>2</td>
+                                        <div class="input-group">
+                                            <div class="custom-file">
+                                                <input
+                                                    type="file"
+                                                    class="custom-file-input"
+                                                    id="exampleInputFile"
+                                                ></input>
 
-                                                <td>Test 2</td>
+                                                <label
+                                                    class="custom-file-label"
+                                                    for="exampleInputFile"
+                                                >33278.jpg</label>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                                <td>Test 2</td>
+                                    <div class="form-group">
+                                        <label
+                                            for="inputStatus"
+                                            class="text-muted"
+                                        >
+                                            Select Category
+                                                        *
+                                        </label>
 
-                                                <td class="project-actions text-left">
-                                                    <a
-                                                        class="btn btn-info btn-sm"
-                                                        href="#"
-                                                    >
-                                                        <i class="fas fa-pencil-alt"></i>
-                                                    </a>
+                                        <select
+                                            id="inputStatus"
+                                            class="form-control custom-select"
+                                        >
+                                            <option
+                                                selected=""
+                                                disabled=""
+                                            >Select one</option>
 
-                                                    <a
-                                                        class="btn btn-danger btn-sm"
-                                                        href="#"
-                                                    >
-                                                        <i class="fas fa-trash"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                            <option>Choice 1</option>
 
-                                    <!-- /.tab-content -->
+                                            <option>Choice 2</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label
+                                            for="inputStatus"
+                                            class="text-muted"
+                                        >Show Comment? *</label>
+
+                                        <select
+                                            id="inputStatus"
+                                            class="form-control custom-select"
+                                        >
+                                            <option
+                                                selected=""
+                                                disabled=""
+                                            >Select one</option>
+
+                                            <option>No</option>
+
+                                            <option>Yes</option>
+                                        </select>
+                                    </div>
+
+                                    <div
+                                        class="mx-n3 p-2 h5"
+                                        style="background-color: #E9ECEF; color: #1971c2; text-align: center;"
+                                    >SEO Information</div>
+
+                                    <div class="form-group">
+                                        <label
+                                            for="inputName"
+                                            class="text-muted"
+                                        >Title</label>
+
+                                        <input
+                                            type="text"
+                                            id="inputName"
+                                            class="form-control"
+                                        ></input>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label
+                                            for="inputDescription"
+                                            class="text-muted"
+                                        >
+                                            Meta
+                                                        Description
+                                        </label>
+
+                                        <textarea
+                                            id="inputDescription"
+                                            class="form-control"
+                                            rows="4"
+                                        ></textarea>
+                                    </div>
+
+                                    <div class="btn">
+                                        <button
+                                            type="button"
+                                            class="btn btn-block btn-success btn-md"
+                                        >Submit</button>
+                                    </div>
+
+                                    <div>
+                                        <button
+                                            type="button"
+                                            class="btn btn-success swalDefaultSuccess"
+                                        >Launch Success Toast</button>
+                                    </div>
                                 </div>
-
-                                <!-- /.card-body -->
                             </div>
 
-                            <!-- /.card -->
+                            <!-- /.card-body -->
                         </div>
 
-                        <!-- /.col -->
+                        <!-- /.card -->
                     </div>
 
-                    <!-- /.row -->
+                    <!-- /.col -->
                 </div>
 
-                <!-- /.container-fluid -->
+                <!-- /.row -->
             </section>
-
-            <!-- /.content -->
         </div>
 
-        <!-- /.content-wrapper -->
-
-        <footer class="main-footer">
-            <div class="float-right d-none d-sm-block">
-                <b>Version</b>
-
-                3.2.0
-            </div>
-
-            <strong>
-                Copyright &copy; 2014-2021
-
-                <a href="https://adminlte.io">AdminLTE.io</a>
-
-                .
-            </strong>
-
-            All rights reserved.
-        </footer>
-
-        <!-- Control Sidebar -->
-
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-        </aside>
-
-        <!-- /.control-sidebar -->
+        <!-- /.container-fluid -->
+        <!-- /.content -->
     </div>
 
+    <!-- /.content-wrapper -->
+    <!-- Control Sidebar -->
+
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+
+    <!-- /.control-sidebar -->
     <!-- ./wrapper -->
     <!-- jQuery -->
     <script src="../../plugins/jquery/jquery.min.js"></script>
@@ -1723,24 +1828,67 @@
     <script src="../../dist/js/adminlte.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="../../dist/js/demo.js"></script>
-    <!-- Page specific script -->
+    <!-- SweetAlert2 -->
+    <script src="../../plugins/sweetalert2/sweetalert2.min.js"></script>
+    <!-- Summernote -->
+    <script src="../../plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- CodeMirror -->
+    <script src="../../plugins/codemirror/codemirror.js"></script>
+    <script src="../../plugins/codemirror/mode/css/css.js"></script>
+    <script src="../../plugins/codemirror/mode/xml/xml.js"></script>
+    <script src="../../plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
 
     <script>
         $(function () {
-      $("#example1").DataTable({
-        "responsive": true, "lengthChange": true, "autoWidth": true,
-        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-      $('#example2').DataTable({
-        "paging": true,
-        "lengthChange": true,
-        "searching": true,
-        "ordering": true,
-        "info": true,
-        "autoWidth": true,
-        "responsive": true,
+            // Toaster / Alert
+            var Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000
+          });
+      
+          $('.swalDefaultSuccess').click(function() {
+            Toast.fire({
+              icon: 'success',
+              title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+            })
+          });
+          
+          $('.swalDefaultWarning').click(function() {
+            Toast.fire({
+              icon: 'warning',
+              title: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+            })
+          });
+      
+          $('.toastrDefaultSuccess').click(function() {
+            toastr.success('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
+          });
+          
+          $('.toastrDefaultWarning').click(function() {
+            toastr.warning('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
+          });
+      
+          $('.toastsDefaultDefault').click(function() {
+            $(document).Toasts('create', {
+              title: 'Toast Title',
+              body: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.'
+            })
+          });
+          
+            // Summernote
+            $('#summernote').summernote({
+                height: 300,   //set editable area's height
+            });
+        
       });
-    });
+    </script>
+
+    <script>
+        $(function() {
+          
+        });
     </script>
 </body>
 </html>
