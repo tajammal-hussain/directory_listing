@@ -19,9 +19,26 @@
 </head>
 <style>
  
-
-</style>
-<body class="hold-transition sidebar-mini">
+  .nav-tabs {
+      border-right: none;
+  }
+  #vert-tabs-tab.nav-tabs {
+      border-right: none;
+      border-radius: 14px;
+  }
+  
+    .nav-link1{
+        background-color: rgb(226, 223, 223);
+       border-radius: 5px;
+        font-size: larger;
+  }
+  .nav-link1.active{
+    background-color: rgb(127, 127, 252);
+    color: white;
+  }
+ 
+  </style>
+  <body class="hold-transition sidebar-mini">
 <div class="wrapper">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -124,7 +141,7 @@
       </li>
       <!-- Notifications Dropdown Menu -->
       <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">git
+        <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-bell"></i>
           <span class="badge badge-warning navbar-badge">15</span>
         </a>
@@ -848,7 +865,6 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-            <!-- <div class="card card-primary card-outline"> -->
               
              
               <!-- /.card -->
@@ -856,58 +872,92 @@
           </div>
           <!-- /.col -->
         </div>
-        <!-- ./row -->
-        <!-- tayyab end of sidebar -->
-<br><h5> Add Social Media Item</h5>
-        <div class="row">
-            <div class="col-md-12">
-              <div class="card card-default">
-                <div class="card-header"> 
-                  <div class="text right" style="display: flex; justify-content: end ;">
-                               <button type="button" class="btn btn-primary">+View All</button>
-                </div>
-                    <div class="col-md-12">
-                      <div class="btn-group w-100">
-                
-                        <div class="card-body">
-                          <div class="form-group">
-                            
-      
-                            <label for="exampleInputEmail1">URL *</label>
-                            <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter here">
-                          </div>
-                          <div class="form-group">
-                          <label for="exampleInputPassword1">Icon(Font Awasome 5 Code ) *</label>
-                            <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="">
-                            <p class="text-danger">Example:"fab fa-facebook-fa"</p>
-                          </div>
-                        
-                  <label for="exampleInputPassword1">Order</label>
-                            <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="0">
-                        
-                         
-                        </div>
-                      </form>
-                    </div>  
-                    <button type="button" class="btn btn-success">Submit</button>                                     
-           </div>
-           
+        <!-- ./row -->   
+        <!-- tahir end of sidebar -->
 
-        </div>
-    
-        </div>
-        </div>
+       
      
 
-           <!-- jQuery -->
-  <!-- ./wrapper -->
-        <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
-</body>
-</html>
+        <!-- /.row tahir -->
+        <!-- <div class="card card-primary card-outline"> -->
+          <div class="card-header">
+            <!-- <h3 class="card-title">
+              <i class="fas fa-edit"></i>
+              Vertical Tabs Examples
+            </h3> -->
+          </div>
+          <div class="card-body">
+            <h4>Edit Othr Page Information</h4>
+            <div class="row">
+              <div class="col-5 col-sm-3">
+                <div class="nav flex-column nav-tabs h-100" id="vert-tabs-tab" role="tablist" aria-orientation="vertical"> 
+                  <!-- tahir other  1 to 4  -->
+                  
+                  <a class="nav-link1 px-1 " id="vert-tabs-login-tab" data-toggle="pill" href="#vert-tabs-login" role="tab" aria-controls="vert-tabs-login" aria-selected="true">Login Page</a>
+                  <a class="nav-link1  mt-2 px-1" id="vert-tabs-favicon-tab" data-toggle="pill" href="#vert-tabs-favicon" role="tab" aria-controls="vert-tabs-favicon" aria-selected="false">Registration Page</a>
+                  <a class="nav-link1  mt-2 px-1" id="vert-tabs-footer-tab" data-toggle="pill" href="#vert-tabs-footer" role="tab" aria-controls="vert-tabs-footer" aria-selected="false">Forget Password Page</a>
+                  <a class="nav-link1  mt-2 px-1" id="vert-tabs-recaptcha-tab" data-toggle="pill" href="#vert-tabs-recaptcha" role="tab" aria-controls="vert-tabs-recaptcha" aria-selected="false">Customer Panel</a>
+                </div>
+              </div>
+    
+              <div class="col-7 col-sm-9">
+                <div class="tab-content" id="vert-tabs-tabContent">
+                   
+                          <!-- login page main -->
+                          <div class="tab-pane fade show active" id="vert-tabs-login" role="tabpanel" aria-labelledby="vert-tabs-login-tab">
+                            
+                            <label for="exampleInputEmail1">Title</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Login">
+      
+                            <label for="exampleInputEmail1">Meta Decription</label>
+                            <textarea class="form-control" style="height: 70px"></textarea>
+      
+                          </div>
+
+                          <!-- design 2 registration page             -->
+                          <div class="tab-pane fade" id="vert-tabs-favicon" role="tabpanel" aria-labelledby="vert-tabs-favicon-tab">
+                            <label for="exampleInputEmail1">Title</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Registration">
+                            <label for="exampleInputEmail1">Meta Decription</label>
+                            <textarea class="form-control" style="height: 70px"></textarea>
+      
+                          </div> 
+                        <div class="tab-pane fade" id="vert-tabs-footer" role="tabpanel" aria-labelledby="vert-tabs-footer-tab">
+                             
+                          <label for="exampleInputEmail1">Title</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Forget Password">
+    
+                          <label for="exampleInputEmail1">Meta Decription</label>
+                          <textarea class="form-control" style="height: 70px"></textarea>
+    
+                          </div>  
+          
+                    <div class="tab-pane fade" id="vert-tabs-recaptcha" role="tabpanel" aria-labelledby="vert-tabs-recaptcha-tab">
+                        
+                      <label for="exampleInputEmail1">Title</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Customer Panel">
+
+                      <label for="exampleInputEmail1">Meta Decription</label>
+                      <textarea class="form-control" style="height: 70px"></textarea>
+
+                        </div> 
+            
+    
+                </div>
+             </div>
+             <td>
+              <button type="button" class="btn btn-block btn-success mt-4">Update</button>
+            </td>
+          </div>
+    
+    <!-- jQuery -->
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../../dist/js/demo.js"></script>
+         
+    </body>
+    </html>
