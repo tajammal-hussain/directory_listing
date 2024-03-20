@@ -48,24 +48,6 @@
         href="../../dist/css/adminlte.min.css"
     ></link>
 
-    <!-- summernote -->
-
-    <link
-        rel="stylesheet"
-        href="../../plugins/summernote/summernote-bs4.min.css"
-    ></link>
-
-    <!-- CodeMirror -->
-
-    <link
-        rel="stylesheet"
-        href="../../plugins/codemirror/codemirror.css"
-    ></link>
-
-    <link
-        rel="stylesheet"
-        href="../../plugins/codemirror/theme/monokai.css"
-    ></link>
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -1563,7 +1545,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Blogs</h1>
+                            <h1>Posts</h1>
                         </div>
 
                         <div class="col-sm-6">
@@ -1572,7 +1554,7 @@
                                     <a href="#">Home</a>
                                 </li>
 
-                                <li class="breadcrumb-item active">Blogs</li>
+                                <li class="breadcrumb-item active">Posts</li>
                             </ol>
                         </div>
                     </div>
@@ -1588,312 +1570,97 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <div class="card-header d-flex p-0">
-                                    <ul class="nav nav-pills ml-auto p-2">
-                                        <li class="nav-item border rounded">
-                                            <a
-                                                class="nav-link active"
-                                                href="#tab_1"
-                                                data-toggle="tab"
-                                            >
-                                                <span class="fs-3 fw-bold">+ View All</span>
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item border rounded">
-                                            <a
-                                                class="nav-link"
-                                                href="#tab_2"
-                                                data-toggle="tab"
-                                            >
-                                                <span class="fs-3 fw-bold">+</span>
-
-                                                Add New
-                                            </a>
-                                        </li>
-                                    </ul>
+                                <div
+                                    class="card-header d-flex p-2"
+                                    style="display: flex; justify-content: end;"
+                                >
+                                    <a
+                                        class="bg-primary rounded text-white py-1 px-2"
+                                        href="#"
+                                    >
+                                        <span class="fs-3 fw-bold">
+                                            <i class="fa fa-plus"></i>
+                                            Add New
+                                        </span>
+                                    </a>
                                 </div>
 
                                 <!-- /.card-header -->
 
                                 <div class="card-body">
-                                    <div class="tab-content">
-                                        <div
-                                            class="tab-pane active"
-                                            id="tab_1"
-                                        >
-                                            <!-- card-header -->
+                                    <table
+                                        id="example2"
+                                        class="table table-bordered table-hover"
+                                    >
+                                        <thead>
+                                            <tr>
+                                                <th>Serial</th>
 
-                                            <div class="card-tools">
-                                                <div
-                                                    class="input-group input-group-lg"
-                                                    style="width: 300px;"
-                                                >
-                                                    <div class="input-group-append">
-                                                        <button
-                                                            type="submit"
-                                                            class="btn btn-default"
-                                                        >
-                                                            <i class="fas fa-search"></i>
-                                                        </button>
-                                                    </div>
+                                                <th>Photo</th>
 
-                                                    <input
-                                                        type="text"
-                                                        name="table_search"
-                                                        class="form-control float-right"
-                                                        placeholder="Search"
-                                                    ></input>
-                                                </div>
-                                            </div>
+                                                <th>Title</th>
 
-                                            <table
-                                                id="example2"
-                                                class="table table-bordered table-hover"
-                                            >
-                                                <thead>
-                                                    <tr>
-                                                        <th>Serial</th>
+                                                <th>Category</th>
 
-                                                        <th>Photo</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
 
-                                                        <th>Title</th>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
 
-                                                        <th>Category</th>
+                                                <td>Test 1</td>
 
-                                                        <th>Action</th>
-                                                    </tr>
-                                                </thead>
+                                                <td>Test 1</td>
 
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td>
+                                                <td>Test 1</td>
 
-                                                        <td>Test 1</td>
+                                                <td class="project-actions text-left">
+                                                    <a
+                                                        class="btn btn-info btn-sm"
+                                                        href="#"
+                                                    >
+                                                        <i class="fas fa-pencil-alt"></i>
+                                                    </a>
 
-                                                        <td>Test 1</td>
+                                                    <a
+                                                        class="btn btn-danger btn-sm"
+                                                        href="#"
+                                                    >
+                                                        <i class="fas fa-trash"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
 
-                                                        <td>Test 1</td>
+                                            <tr>
+                                                <td>2</td>
 
-                                                        <td class="project-actions text-left">
-                                                            <a
-                                                                class="btn btn-info btn-sm"
-                                                                href="#"
-                                                            >
-                                                                <i class="fas fa-pencil-alt"></i>
-                                                            </a>
+                                                <td>Test 2</td>
 
-                                                            <a
-                                                                class="btn btn-danger btn-sm"
-                                                                href="#"
-                                                            >
-                                                                <i class="fas fa-trash"></i>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
+                                                <td>Test 2</td>
 
-                                                    <tr>
-                                                        <td>2</td>
+                                                <td>Test 2</td>
 
-                                                        <td>Test 2</td>
+                                                <td class="project-actions text-left">
+                                                    <a
+                                                        class="btn btn-info btn-sm"
+                                                        href="#"
+                                                    >
+                                                        <i class="fas fa-pencil-alt"></i>
+                                                    </a>
 
-                                                        <td>Test 2</td>
-
-                                                        <td>Test 2</td>
-
-                                                        <td class="project-actions text-left">
-                                                            <a
-                                                                class="btn btn-info btn-sm"
-                                                                href="#"
-                                                            >
-                                                                <i class="fas fa-pencil-alt"></i>
-                                                            </a>
-
-                                                            <a
-                                                                class="btn btn-danger btn-sm"
-                                                                href="#"
-                                                            >
-                                                                <i class="fas fa-trash"></i>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-
-                                        <!-- /.tab-pane -->
-
-                                        <div
-                                            class="tab-pane"
-                                            id="tab_2"
-                                        >
-                                            <div class="form-group">
-                                                <label
-                                                    for="inputClientCompany"
-                                                    class="text-muted"
-                                                >Title *</label>
-
-                                                <input
-                                                    type="text"
-                                                    id="inputClientCompany"
-                                                    class="form-control"
-                                                ></input>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label
-                                                    for="inputProjectLeader"
-                                                    class="text-muted"
-                                                >Slug</label>
-
-                                                <input
-                                                    type="text"
-                                                    id="inputProjectLeader"
-                                                    class="form-control"
-                                                ></input>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label
-                                                    for="inputContent"
-                                                    class="text-muted"
-                                                >Content *</label>
-
-                                                <textarea
-                                                    id="summernote"
-                                                    style="display: none;"
-                                                >
-                                                    Place &lt;em&gt;some&lt;/em&gt; &lt;u&gt;text&lt;/u&gt; &lt;strong&gt;here&lt;/strong&gt;
-                                                </textarea>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label
-                                                    for="inputShortDescription"
-                                                    class="text-muted"
-                                                >
-                                                    Short Content
-                                                        *
-                                                </label>
-
-                                                <textarea
-                                                    id="inputDescription"
-                                                    class="form-control"
-                                                    rows="4"
-                                                ></textarea>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label
-                                                    for="exampleInputFile"
-                                                    class="text-muted"
-                                                >Photo</label>
-
-                                                <div class="input-group">
-                                                    <div class="custom-file">
-                                                        <input
-                                                            type="file"
-                                                            class="custom-file-input"
-                                                            id="exampleInputFile"
-                                                        ></input>
-
-                                                        <label
-                                                            class="custom-file-label"
-                                                            for="exampleInputFile"
-                                                        >33278.jpg</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label
-                                                    for="inputStatus"
-                                                    class="text-muted"
-                                                >
-                                                    Select Category
-                                                        *
-                                                </label>
-
-                                                <select
-                                                    id="inputStatus"
-                                                    class="form-control custom-select"
-                                                >
-                                                    <option
-                                                        selected=""
-                                                        disabled=""
-                                                    >Select one</option>
-
-                                                    <option>Choice 1</option>
-
-                                                    <option>Choice 2</option>
-                                                </select>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label
-                                                    for="inputStatus"
-                                                    class="text-muted"
-                                                >Show Comment? *</label>
-
-                                                <select
-                                                    id="inputStatus"
-                                                    class="form-control custom-select"
-                                                >
-                                                    <option
-                                                        selected=""
-                                                        disabled=""
-                                                    >Select one</option>
-
-                                                    <option>No</option>
-
-                                                    <option>Yes</option>
-                                                </select>
-                                            </div>
-
-                                            <div class="mx-n3 p-2 bg-gray h5">SEO Information</div>
-
-                                            <div class="form-group">
-                                                <label
-                                                    for="inputName"
-                                                    class="text-muted"
-                                                >Title</label>
-
-                                                <input
-                                                    type="text"
-                                                    id="inputName"
-                                                    class="form-control"
-                                                ></input>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label
-                                                    for="inputDescription"
-                                                    class="text-muted"
-                                                >
-                                                    Meta
-                                                        Description
-                                                </label>
-
-                                                <textarea
-                                                    id="inputDescription"
-                                                    class="form-control"
-                                                    rows="4"
-                                                ></textarea>
-                                            </div>
-
-                                            <div class="btn">
-                                                <button
-                                                    type="button"
-                                                    class="btn btn-block btn-success btn-lg"
-                                                >Submit</button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- /.tab-pane -->
+                                                    <a
+                                                        class="btn btn-danger btn-sm"
+                                                        href="#"
+                                                    >
+                                                        <i class="fas fa-trash"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-
-                                <!-- /.tab-content -->
                             </div>
 
                             <!-- /.card-body -->
@@ -1914,7 +1681,6 @@
     </div>
 
     <!-- /.content-wrapper -->
-
     <!-- Control Sidebar -->
 
     <aside class="control-sidebar control-sidebar-dark">
@@ -1945,43 +1711,22 @@
     <!-- AdminLTE for demo purposes -->
     <script src="../../dist/js/demo.js"></script>
     <!-- Page specific script -->
-    <!-- Summernote -->
-    <script src="../../plugins/summernote/summernote-bs4.min.js"></script>
-    <!-- CodeMirror -->
-    <script src="../../plugins/codemirror/codemirror.js"></script>
-    <script src="../../plugins/codemirror/mode/css/css.js"></script>
-    <script src="../../plugins/codemirror/mode/xml/xml.js"></script>
-    <script src="../../plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
 
     <script>
         $(function () {
             $("#example1").DataTable({
-                "responsive": true, "lengthChange": false, "autoWidth": false,
-                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+                "responsive": true, "lengthChange": true, "autoWidth": true
             }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
             $('#example2').DataTable({
                 "paging": true,
-                "lengthChange": false,
-                "searching": false,
+                "lengthChange": true,
+                "searching": true,
                 "ordering": true,
                 "info": true,
-                "autoWidth": false,
+                "autoWidth": true,
                 "responsive": true,
             });
         });
-    </script>
-
-    <script>
-        $(function () {
-        // Summernote
-        $('#summernote').summernote()
-    
-        // CodeMirror
-        CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
-          mode: "htmlmixed",
-          theme: "monokai"
-        });
-      })
     </script>
 </body>
 </html>

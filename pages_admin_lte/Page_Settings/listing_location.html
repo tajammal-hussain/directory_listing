@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<primary lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -935,13 +935,7 @@
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1>Edit FAQ Page Information</h1>
-              </div>
-              <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
-                  <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item active">Faq Page Info</li>
-                </ol>
+                <h1>Edit Listing Location Category Page Information</h1>
               </div>
             </div>
           </div>
@@ -955,7 +949,7 @@
             <input
               type="text"
               class="form-control mb-4"
-              placeholder="FAQ"
+              placeholder=" Listing Location"
               aria-label="Username"
               aria-describedby="basic-addon1"
             />
@@ -966,54 +960,79 @@
             <span style="font-size: large">Details</span>
             <textarea id="summernote">
  
-                Place <em>some</em> <u>text</u> <strong>here</strong><br />
-                <strong>3) Are there any special rates or discounts available?</strong><br />
-For plumbers listed here, we offer a special 25% discount voucher to work with a Local Business Agency we partnered with. For customers, there may be some plumbers who offer discounts, bundled service packages, or special promotions. You can browse individual plumber profiles to find deals relevant to you.<br />
-<strong>4)What types of plumbing services do the listed companies offer?</strong> <br />
-Plumbers listed here offer a full range of services like repairs, installations, maintenance, gas work, drainage, etc.<br />
-<strong>5) What should I do in a plumbing emergency?</strong><br />
-Emergencies can be stressful. Just use our filter on the Listing page and search for plumbers in your area or nearby. There will be many who offer emergency services.<br />
-
+                Place <em>some</em> <u>text</u> <strong>here</strong>
+                
               </textarea
             >
           </div>
 
-          <!-- <div class="checkbox" style="display: inline-block;"><label class="unselectable"><input id="chkAlreadyDelivered" type="checkbox" checked=""> Skrij že oddane količine</label></div>
-<button class="btn btn-primary" style="display: inline-block;">Natisni</button>
-<div class="checkbox" style="display: inline-block;"><label class="unselectable"><input id="chkAlreadyDelivered" type="checkbox" checked=""> Natisni artikle iz privzete ponudbe</label></div> -->
-          <div
-            class=""
-            style="
-              width: 250px;
-              display: flex;
-              align-items: center;
-              justify-content: space-around;
-            "
-          >
-            <span style="font-weight: bolder">Status</span>
-            <!-- <input type="checkbox" id="Check1" value="Show" onclick="selectOnlyThis(this.id)" >Show</input>
-                    <input type="checkbox" id="Check2" value="Hide" onclick="selectOnlyThis(this.id)" >Hide</input> -->
-            <div class="custom-control custom-radio">
-              <input
-                class="custom-control-input custom-control-input-primary custom-control-input-outline"
-                type="radio"
-                id="customRadio5"
-                name="customRadio2"
-              />
-              <label for="customRadio5" class="custom-control-label"
-                >show</label
-              >
+          <div style="display: flex; justify-content: space-between">
+            <div
+              class=""
+              style="
+                width: 250px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+              "
+            >
+              <span style="font-weight: bolder">Status</span>
+
+              <div class="custom-control custom-radio">
+                <input
+                  class="custom-control-input custom-control-input-primary custom-control-input-outline"
+                  type="radio"
+                  id="customRadio5"
+                  name="customRadio1"
+                />
+                <label for="customRadio5" class="custom-control-label"
+                  >show</label
+                >
+              </div>
+              <div class="custom-control custom-radio">
+                <input
+                  class="custom-control-input custom-control-input-primary custom-control-input-outline"
+                  type="radio"
+                  id="customRadio4"
+                  name="customRadio1"
+                />
+                <label for="customRadio4" class="custom-control-label"
+                  >hide</label
+                >
+              </div>
             </div>
-            <div class="custom-control custom-radio">
-              <input
-                class="custom-control-input custom-control-input-primary custom-control-input-outline"
-                type="radio"
-                id="customRadio4"
-                name="customRadio2"
-              />
-              <label for="customRadio4" class="custom-control-label"
-                >hide</label
-              >
+            <div
+              class=""
+              style="
+                width: 250px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+              "
+            >
+              <span style="font-weight: bolder">Show Counter</span>
+              <div class="custom-control custom-radio">
+                <input
+                  class="custom-control-input custom-control-input-primary custom-control-input-outline"
+                  type="radio"
+                  id="customRadio5"
+                  name="customRadio2"
+                />
+                <label for="customRadio5" class="custom-control-label"
+                  >show</label
+                >
+              </div>
+              <div class="custom-control custom-radio">
+                <input
+                  class="custom-control-input custom-control-input-primary custom-control-input-outline"
+                  type="radio"
+                  id="customRadio4"
+                  name="customRadio2"
+                />
+                <label for="customRadio4" class="custom-control-label"
+                  >hide</label
+                >
+              </div>
             </div>
           </div>
 
@@ -1045,8 +1064,8 @@ Emergencies can be stressful. Just use our filter on the Listing page and search
                     type="text"
                     class="form-control mb-4"
                     width="50%"
-                    placeholder="FAQ"
-                    aria-label="FAQ"
+                    placeholder="Listing Location"
+                    aria-label="Listing Location"
                     aria-describedby="basic-addon1"
                   />
                   <label for="Meta">Meta Discription</label>
@@ -1103,6 +1122,8 @@ Emergencies can be stressful. Just use our filter on the Listing page and search
     <script src="../../plugins/codemirror/mode/css/css.js"></script>
     <script src="../../plugins/codemirror/mode/xml/xml.js"></script>
     <script src="../../plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <!-- bs-custom-file-input -->
+    <script src="../../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="../../dist/js/demo.js"></script>
     <!-- Page specific script -->
@@ -1133,4 +1154,4 @@ Emergencies can be stressful. Just use our filter on the Listing page and search
       }
     </script>
   </body>
-</primary
+</html>
