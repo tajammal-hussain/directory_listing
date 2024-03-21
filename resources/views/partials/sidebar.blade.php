@@ -186,7 +186,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ route('blog') }}" class="nav-link">
+                            <a href="{{ route('blog_sec') }}" class="nav-link">
                                 <p>Blogs</p>
                             </a>
                         </li>

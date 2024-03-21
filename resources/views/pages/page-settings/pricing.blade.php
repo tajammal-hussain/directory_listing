@@ -20,28 +20,39 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Edit Ppricing Page Information</h1>
+                        <h1>Pricing</h1>
                     </div>
+
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Pricing Page Info</li>
+                            <li class="breadcrumb-item">
+                                <a href="{{route('pricing')}}">Page Settings</a>
+                            </li>
+
+                            <li class="breadcrumb-item active">Pricing</li>
                         </ol>
                     </div>
                 </div>
             </div>
+
             <!-- /.container-fluid -->
         </section>
+        <!-- Content Header (Page header) -->
+
 
         <!-- Main content -->
         <section class="content">
             <div>
-                <div class="card-title">Name</div>
+                <div class="d-flex flex-row justify-content-between">
+                    <div class="card-title position-relative mt-3">Name</div>
+                    <a class="btn btn-primary d-flex justify-content-end ml-5 mb-3" href="{{ route('dashboard') }}">
+                        Back
+                    </a>
+                </div>
                 <input
                     type="text"
                     class="form-control mb-4"

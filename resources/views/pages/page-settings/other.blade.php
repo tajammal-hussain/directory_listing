@@ -44,13 +44,36 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>Other</h1>
+                    </div>
 
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item">
+                                <a href="{{route('other')}}">Page Settings</a>
+                            </li>
+
+                            <li class="breadcrumb-item active">Other</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- /.container-fluid -->
+        </section>
 
         <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
+
+
+
 
 
                         <!-- /.card -->
@@ -66,15 +89,18 @@
 
             <!-- /.row tahir -->
             <!-- <div class="card card-primary card-outline"> -->
-            <div class="card-header">
-                <!-- <h3 class="card-title">
-                  <i class="fas fa-edit"></i>
-                  Vertical Tabs Examples
-                </h3> -->
+
+
+
+            <div class="fs-5">
+                <div class="d-flex flex-row justify-content-between">
+                <span class="mr-2"><h4>Edit Other Page Information</h4></span>
+                <a class="btn btn-primary" href="{{ route('dashboard') }}">
+                    Back
+                </a>
+                </div>
             </div>
-            <div class="card-body">
-                <h4>Edit Othr Page Information</h4>
-                <div class="row">
+                <div class="row mt-2">
                     <div class="col-5 col-sm-3">
                         <div class="nav flex-column nav-tabs h-100" id="vert-tabs-tab" role="tablist" aria-orientation="vertical">
                             <!-- tahir other  1 to 4  -->

@@ -5,6 +5,11 @@
     @push('custom-css')
         <!-- Theme style -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            .table{
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);;
+            }
+        </style>
     @endpush
 @section('data')
 
@@ -30,7 +35,7 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item">
-                                <a href="#">Home</a>
+                                <a href="{{route('dashboard')}}">Dashboard</a>
                             </li>
 
                             <li class="breadcrumb-item active">Email Template</li>
@@ -57,12 +62,7 @@
         <!-- </section> -->
 
         <!-- Main content -->
-        <style>
-            .table{
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);;
-            }
-        </style>
-        <body>
+
         <section class="mt-3">
             <div class="container-fluid">
                 <div class="row">
@@ -70,8 +70,14 @@
                         <div class="card">
                             <div class="">
                                 <h4 class="card-title text-muted mt-2 px-2">Email Template</h4>
+                                <h3 class="card-title"><h3 class="card-title float-right  mt-2 px-2">
+                                        <a href="{{ route('dashboard') }}" class="btn btn-primary">
+                                            Back
+                                        </a>
+                                    </h3>
                             </div>
                             <!-- /.card-header -->
+
                             <div class="card-body">
                                 <table class="table table-bordered text-muted">
                                     <thead class="text-muted text-sm">

@@ -78,14 +78,6 @@ Route::get('/other', function () {
     return view('pages.page-settings.other');
 })->name('other');
 
-Route::get('/payment', function () {
-    return view('pages.page-settings.payment');
-})->name('payment');
-
-Route::get('/payment_settings', function () {
-    return view('pages.page-settings.payment_settings');
-})->name('payment_settings');
-
 Route::get('/pricing', function () {
     return view('pages.page-settings.pricing');
 })->name('pricing');
@@ -106,9 +98,9 @@ Route::get('/approved_comments', function () {
     return view('pages.blog-section.approved_comments');
 })->name('approved_comments');
 
-Route::get('/blog', function () {
-    return view('pages.blog-section.blog');
-})->name('blog');
+Route::get('/blog_sec', function () {
+    return view('pages.blog-section.blog_sec');
+})->name('blog_sec');
 
 Route::get('/categories', function () {
     return view('pages.blog-section.categories');
@@ -148,6 +140,10 @@ Route::get('/lis_category', function () {
 Route::get('/lis_location', function () {
     return view('pages.listing-section.lis_location');
 })->name('lis_location');
+
+Route::get('/add_lis_location', function () {
+    return view('pages.listing-section.add_lis_location');
+})->name('add_lis_location');
 
 Route::get('/listing1', function () {
     return view('pages.listing-section.listing1');

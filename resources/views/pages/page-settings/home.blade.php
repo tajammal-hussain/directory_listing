@@ -42,6 +42,7 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
+
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <div class="container-fluid">
@@ -53,7 +54,7 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item">
-                                <a href="#">Home</a>
+                                <a href="{{route('home')}}">Page Settings</a>
                             </li>
 
                             <li class="breadcrumb-item active">home</li>
@@ -67,20 +68,23 @@
 
         <!-- Main content -->
         <section class="content">
-            <div class="container-fluid">
+            <div class="container-fluid d-flex flex-row justify-content-between">
                 <div class="row">
                     <div class="col-md-12">
                         <!-- <div class="card card-primary card-outline"> -->
-
+                        <h4>Edit</h4>
 
                         <!-- /.card -->
                     </div>
                 </div>
+                <a class="btn btn-primary" href="{{ route('dashboard') }}">
+                    Back
+                </a>
                 <!-- /.col -->
             </div>
             <!-- ./row -->
             <div class="card-body">
-                <h4>Edit Home Page Information</h4>
+{{--                <h4>Edit Home Page Information</h4>--}}
                 <div class="row">
                     <div class="col-5 col-sm-3">
                         <div class="nav flex-column nav-tabs h-100" id="vert-tabs-tab" role="tablist" aria-orientation="vertical">

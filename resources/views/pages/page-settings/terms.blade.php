@@ -26,17 +26,34 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Edit Terms and Conditions Page Information</h1>
+                        <h1>Terms & Conditions</h1>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item">
+                                <a href="{{route('terms')}}">Page Settings</a>
+                            </li>
+
+                            <li class="breadcrumb-item active">Terms & Conditions</li>
+                        </ol>
                     </div>
                 </div>
             </div>
+
             <!-- /.container-fluid -->
         </section>
+
 
         <!-- Main content -->
         <section class="content">
             <div>
-                <div class="card-title">Name</div>
+                <div class="d-flex flex-row justify-content-between">
+                    <div class="card-title position-relative mt-3">Name</div>
+                    <a class="btn btn-primary d-flex justify-content-end ml-5 mb-3" href="{{ route('dashboard') }}">
+                        Back
+                    </a>
+                </div>
                 <input
                     type="text"
                     class="form-control mb-4"

@@ -39,7 +39,7 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item">
-                                <a href="#">Home</a>
+                                <a href="{{route('social_media')}}">Settings</a>
                             </li>
 
                             <li class="breadcrumb-item active">Social Media</li>

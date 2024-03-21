@@ -30,7 +30,7 @@
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="{{route('faq')}}">Page Settings</a></li>
                                 <li class="breadcrumb-item active">Faq Page Info</li>
                             </ol>
                         </div>
@@ -42,7 +42,12 @@
             <!-- Main content -->
             <section class="content">
                 <div>
-                    <div class="card-title">Name</div>
+                    <div class="d-flex flex-row justify-content-between">
+                        <div class="card-title position-relative mt-3">Name</div>
+                        <a class="btn btn-primary d-flex justify-content-end ml-5 mb-3" href="{{ route('dashboard') }}">
+                            Back
+                        </a>
+                    </div>
                     <input
                         type="text"
                         class="form-control mb-4"

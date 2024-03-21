@@ -17,25 +17,41 @@
 
     <!-- Main Sidebar Container -->
 
-
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <h1>Edit Privacy Policy Page Information</h1>
-                    </div>
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Privacy Policy</h1>
+                </div>
+
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item">
+                            <a href="{{route('privacy_policy')}}">Page Settings</a>
+                        </li>
+
+                        <li class="breadcrumb-item active">Privacy Policy</li>
+                    </ol>
                 </div>
             </div>
-            <!-- /.container-fluid -->
-        </section>
+        </div>
+
+        <!-- /.container-fluid -->
+    </section>
+        <!-- Content Header (Page header) -->
+
 
         <!-- Main content -->
         <section class="content">
             <div>
-                <div class="card-title">Name</div>
+                <div class="d-flex flex-row justify-content-between">
+                    <div class="card-title position-relative mt-3">Name</div>
+                    <a class="btn btn-primary d-flex justify-content-end ml-5 mb-3" href="{{ route('dashboard') }}">
+                        Back
+                    </a>
+                </div>
                 <input
                     type="text"
                     class="form-control mb-4"

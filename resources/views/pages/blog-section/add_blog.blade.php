@@ -53,16 +53,16 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Blogs</h1>
+                        <h1>Add Blogs</h1>
                     </div>
 
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item">
-                                <a href="#">Home</a>
+                                <a href="{{route('add_blog')}}">Blog</a>
                             </li>
 
-                            <li class="breadcrumb-item active">Blogs</li>
+                            <li class="breadcrumb-item active">Add Blogs</li>
                         </ol>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                             >
                                 <a
                                     class="bg-primary rounded text-white py-1 px-2"
-                                    href="{{ route('blog') }}"
+                                    href="{{ route('blog_sec') }}"
                                 >
                                         <span class="fs-3 fw-bold">
                                             <i class="fa fa-plus"></i>

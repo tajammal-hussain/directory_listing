@@ -37,7 +37,7 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item">
-                                <a href="#">Home</a>
+                                <a href="{{route('customer_review')}}">Customer Review</a>
                             </li>
 
                             <li class="breadcrumb-item active">Add Review</li>
@@ -74,7 +74,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Customer</label>
-                                    <select class="form-control select2" style="width: 100%;">
+                                    <select class="form-control select2" style=" line-height: 0; width: 100%;">
                                         <option selected="selected">salman</option>
                                         <option>waqar</option>
                                         <option>ali</option>
@@ -84,7 +84,7 @@
                                 <div class="col-md-12 p-0">
                                     <div class="form-group">
                                         <label>Listing</label>
-                                        <select class="form-control select2" style="width: 100%;">
+                                        <select class="form-control select2" style=" line-height: 0; width: 100%;">
                                             <option selected="selected">PiPs Heating Specialist Ltd
                                             </option>
                                             <option>Active Fitters
@@ -114,7 +114,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Rating</label>
-                                    <select class="form-control select2" style="width: 100%;">
+                                    <select class="form-control select2" style=" line-height: 0px; width: 100%;">
                                         <option selected="selected">1</option>
                                         <option>2</option>
                                         <option>3</option>

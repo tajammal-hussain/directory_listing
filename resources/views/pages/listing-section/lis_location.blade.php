@@ -40,7 +40,7 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item">
-                                <a href="#">Home</a>
+                                <a href="{{route('lis_location')}}">Listing Section</a>
                             </li>
 
                             <li class="breadcrumb-item active">Listing Location</li>
@@ -61,9 +61,9 @@
 
                         <div class="card">
                             <div class="card-header" style="text-align: end">
-                                <button type="button" class="btn btn-primary">
+                                <a class="btn btn-primary" href="{{route('add_lis_location')}}">
                                     <i class="fa fa-plus"></i> Add New
-                                </button>
+                                </a>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">

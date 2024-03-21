@@ -19,19 +19,36 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Language (Menu Change)</h1>
+                        <h1>Menu Text</h1>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item">
+                                <a href="{{route('menu-change')}}">Language Settings</a>
+                            </li>
+
+                            <li class="breadcrumb-item active">Menu Text</li>
+                        </ol>
                     </div>
                 </div>
             </div>
+
             <!-- /.container-fluid -->
         </section>
+
 
         <!-- Main content -->
         <section class="content">
             <!-- Default box -->
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Setup Key Values</h3>
+                    <div class="d-flex flex-row justify-content-between">
+                        <div class="card-title position-relative mt-2">Setup Key Values</div>
+                        <a class="btn btn-primary d-flex justify-content-end ml-5 mb-3" href="{{ route('dashboard') }}">
+                            Back
+                        </a>
+                    </div>
                 </div>
                 <div class="card-body">
                     <!--Table -->
