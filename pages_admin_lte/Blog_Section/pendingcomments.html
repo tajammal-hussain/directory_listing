@@ -1580,26 +1580,7 @@
                                             <!-- card-header -->
 
                                             <div class="card-tools">
-                                                <div
-                                                    class="input-group input-group-lg"
-                                                    style="width: 300px;"
-                                                >
-                                                    <div class="input-group-append">
-                                                        <button
-                                                            type="submit"
-                                                            class="btn btn-default"
-                                                        >
-                                                            <i class="fas fa-search"></i>
-                                                        </button>
-                                                    </div>
-
-                                                    <input
-                                                        type="text"
-                                                        name="table_search"
-                                                        class="form-control float-right"
-                                                        placeholder="Search"
-                                                    ></input>
-                                                </div>
+                                               
                                             </div>
 
                                             <table
@@ -1678,61 +1659,6 @@
 
                                         <!-- /.tab-pane -->
 
-                                        <div
-                                            class="tab-pane"
-                                            id="tab_2"
-                                        >
-                                            <div class="card-body">
-                                                <div class="form-group">
-                                                    <label for="inputClientCompany">Name</label>
-
-                                                    <input
-                                                        type="text"
-                                                        id="inputClientCompany"
-                                                        class="form-control"
-                                                    ></input>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <label for="inputProjectLeader">Slug</label>
-
-                                                    <input
-                                                        type="text"
-                                                        id="inputProjectLeader"
-                                                        class="form-control"
-                                                    ></input>
-                                                </div>
-
-                                                <div class="mx-n4 p-2 bg-gray h5">SEO Information</div>
-
-                                                <div class="form-group">
-                                                    <label for="inputName">Title</label>
-
-                                                    <input
-                                                        type="text"
-                                                        id="inputName"
-                                                        class="form-control"
-                                                    ></input>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <label for="inputDescription">Meta Description</label>
-
-                                                    <textarea
-                                                        id="inputDescription"
-                                                        class="form-control"
-                                                        rows="4"
-                                                    ></textarea>
-                                                </div>
-
-                                                <div class="btn">
-                                                    <button
-                                                        type="button"
-                                                        class="btn btn-block btn-success btn-lg"
-                                                    >Success</button>
-                                                </div>
-                                            </div>
-                                        </div>
 
                                         <!-- /.tab-pane -->
                                     </div>
@@ -1819,8 +1745,8 @@
       }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
       $('#example2').DataTable({
         "paging": true,
-        "lengthChange": false,
-        "searching": false,
+        "lengthChange": true,
+        "searching": true,
         "ordering": true,
         "info": true,
         "autoWidth": false,
