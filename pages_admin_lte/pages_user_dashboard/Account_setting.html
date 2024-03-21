@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Navbar & Tabs</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="../../plugins/sweetalert2/sweetalert2.min.css">
+  <!-- Toastr -->
+  <link rel="stylesheet" href="../../plugins/toastr/toastr.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+ 
+  .nav-tabs {
+      border-right: none;
+  }
+  #vert-tabs-tab.nav-tabs {
+      border-right: none;
+  }
+  
+    .nav-link1{
+        background-color: rgb(253, 248, 248);
+        padding: 5px;
+        font-size: larger;
+        color: black;
+  }
+  .nav-link1.active{
+    background-color: rgba(242, 242, 242, 0.678);
+    color: black;
+    border-left: 3px solid rgb(207, 32, 32);
+  }
+  .para{
+    font-weight: bold;
+  }
+  .text{
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  </style>
+<body class="hold-transition sidebar-mini">
+
+    <div class="card-body">
+        <h4>Tahir A.'s Account<br>Settings</h4>
+        <div class="row">
+
+          <div class="col-5 col-sm-3">
+            <div class="nav flex-column nav-tabs h-100" id="vert-tabs-tab" role="tablist" aria-orientation="vertical">
+              
+
+              <!-- tahir 1 to 4  -->
+              <a class="nav-link1 px-1 " id="vert-tabs-Profile-tab" data-toggle="pill" href="#vert-tabs-Profile" role="tab" aria-controls="vert-tabs-Profile" aria-selected="true">Profile</a>
+              <a class="nav-link1  mt-2 px-1" id="vert-tabs-Password-tab" data-toggle="pill" href="#vert-tabs-Password" role="tab" aria-controls="vert-tabs-Password" aria-selected="false">Password</a>
+              <a class="nav-link1  mt-2 px-1" id="vert-tabs-Email-tab" data-toggle="pill" href="#vert-tabs-Email" role="tab" aria-controls="vert-tabs-Email" aria-selected="false">Email / Notfification</a>
+              <a class="nav-link1  mt-2 px-1" id="vert-tabs-Location-tab" data-toggle="pill" href="#vert-tabs-Location" role="tab" aria-controls="vert-tabs-Location" aria-selected="false">Location</a>
+  
+              <!-- wahab Theme -->
+              <a class="nav-link1 mt-2 px-1" id="vert-tabs-Theme-tab" data-toggle="pill" href="#vert-tabs-Theme" role="tab" aria-controls="vert-tabs-Theme" aria-selected="false">External Applications</a>
+              
+              </div>
+
+          </div>
+            <!-- with link attached -->
+          <div class="col-7 col-sm-9">
+            <div class="tab-content" id="vert-tabs-tabContent">
+
+                       <!-- tahir 1 to 4  -->
+                       <div class="tab-pane text-left fade show active" id="vert-tabs-Profile" role="tabpanel" aria-labelledby="vert-tabs-Profile-tab">
+                        <h3 class="text-danger">Profile</h3><hr>                   
+                         <label class="mt-10 ">Your Profile Photo <a href="">(Add/Edit)</a></label><br/>
+                         <i class="fa-solid fa-user" style="font-size: 40px; color: gray; border: 1px solid black;  padding: 25px;"></i></i><br/>
+                       
+                        
+                        <label class="mt-1" for="firstname">First Name</label>
+                        <p style="margin-top: -10px;">This field is required.</p>
+                        <input type="email" style="margin-top: -10px;   width: 400px;" class="form-control" id="exampleInputEmail1">
+                        
+                        <label for="exampleInputEmail1">Last Name</label>
+                        <p style="margin-top: -10px;">This field is required. Only your last initial will show on your profile.</p>
+                        <input type="email" style="margin-top: -10px;   width: 400px;" class="form-control" id="exampleInputEmail1">
+                     
+                        <label for="exampleInputEmail1">NickName</label>
+                        <p style="margin-top: -10px;">The Boss, Calamity Jane, The Prolific Reviewer</p>
+                        <input type="email" style="margin-top: -10px;   width: 400px;" class="form-control" id="exampleInputEmail1">
+                        
+
+                        <label for="exampleInputEmail1">Gender</label><br>   
+                        <input type="radio" id="Female" name="image" value="Female" checked>
+                        <label for="left">Female</label>
+                        <input type="radio" id="Male" name="image" value="Male">
+                        <label for="right">Male</label>
+                        <input type="radio" id="Other" name="image" value="Other">
+                        <label for="right">Other</label><br>
+                        <label for="exampleInputEmail1">Primary Language</label>
+                        <select class="form-control select2" style="width: 100%;   width: 400px;">
+                          <option selected="selected">English (United States)</option>
+                          <option selected="selected">English (united kingdom)</option>
+                          <option selected="selected">Urdu</option>
+                          <option selected="selected">Arabic</option>
+                          <option selected="selected">indian</option>
+                          <option selected="selected">Chinese</option>
+                          <option selected="selected">French</option>
+                        </select>
+                        <!-- <input type="email" class="form-control" id="exampleInputEmail1"> -->
+                        
+                     <button class=" btn btn-danger my-3 ">Saves Changes</button>
+                     <a class="m-3">Cancel</a>
+                      </div>
+        
+                      <div class="tab-pane fade" id="vert-tabs-Password" role="tabpanel" aria-labelledby="vert-tabs-Password-tab">
+                        
+                        <h3 class="text-danger">Change your password</h3>
+
+                        <label for="exampleInputEmail1">Current password</label>
+                        <p style="margin-top: -10px;"  >Enter your existing password.
+                        </p>
+                        <input type="email" style="margin-top: -10px; width: 400px; " class="form-control" id="exampleInputEmail1">
+
+                        <label for="exampleInputEmail1">New password</label>
+                        <p  style="margin-top: -10px;">Enter the new password you would like.</p>
+                        <input type="email"  style="margin-top: -10px;  width: 400px;" class="form-control" id="exampleInputEmail1">
+                        
+                        <label for="exampleInputEmail1">Verify new password</label>
+                        <p  style="margin-top: -10px;">Reenter your password to verify.
+                        </p>
+                        <input type="email"  style="margin-top: -10px;  width: 400px;" class="form-control" id="exampleInputEmail1">
+
+                        <button class="btn btn-danger w-20 my-3">Save New Password</button>
+                        <button class=" btn btn-default">Cancel</button>
+                    </div>
+        
+                    <div class="tab-pane fade" id="vert-tabs-Email" role="tabpanel" aria-labelledby="vert-tabs-Email-tab">
+                      <div class="form-group">
+                        <h4 class="text-danger" for="exampleInputEmail1" style="font-weight: bold;">Email Accounts</h4>
+                        <button class=" btn btn-danger" style="float:right; margin-top: -10px;">Add Email</button>
+                        <p>Add accounts, remove accounts, and change your primary account.</p>
+                        <hr>
+                      </div>
+
+                      <div class="form-group">
+                        <h4 class="text-danger" for="exampleInputEmail1" style="font-weight: bold;">Phone Number</h4>
+                        <p>Add or edit your phone number. We’ll automatically enter it when you request a quote, make restaurant reservations, order food delivery, or make other transactions on Yelp.</p>
+                        <hr>
+                        <div class="" style="display: flex;">
+                        <select class="form-control select2" style=" width: 90px; ">
+                          <option selected="selected">+92</option>
+                          <option selected="selected">+44</option>
+                          <option selected="selected">+1</option>
+                          <option selected="selected">+61</option>
+                          <option selected="selected">+54</option>
+                          <option selected="selected">+934</option>
+                          <option selected="selected">+935</option>
+                        </select>
+                        <input type="" style=" width: 300px;" placeholder="Phone Number"  class="form-control" id="exampleInputEmail1" >
+                        </div>
+                        <button class="btn btn-danger w-20 my-3">Save Phone Number</button>
+
+                      </div>
+                     
+                      
+                      <button class="btn btn-danger w-20 my-3">Save Notification setting</button>
+                      <a class="" style="margin: 10px;">Cancel</a>
+                    </div>
+        
+                   <div class="tab-pane fade" id="vert-tabs-Location" role="tabpanel" aria-labelledby="vert-tabs-Location-tab">
+                    
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Your Saved Locations</label>
+                      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-danger" style="float: right;">
+                        Add a new Location
+                      </button>   
+                      
+                      <!-- open form after click -->
+                      <div class="modal fade" id="modal-danger">
+                        <div class="modal-dialog">
+                          <div class="modal-content ">
+                            <div class="modal-header">
+                              <h4 class="modal-title text-danger">Add a new location</h4>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <label for="exampleInputEmail1">Location Name (Home, Office)</label>
+                              <input type="email" style="margin-top: -8x; width: 400px; " class="form-control" id="exampleInputEmail1"><br>
+                              <label for="exampleInputEmail1">Address, City, State, and/or Zip</label>
+                              <input type="email" style="margin-top: -8px; width: 400px; " class="form-control" id="exampleInputEmail1">
+      
+                            </div>
+
+                            <div class="p-3">
+                              <button type="button" class="btn btn-danger btn-outline mr-2">Save </button>
+                                 <a href="" >Cancel</a>
+                            </div>
+                          </div>
+                          <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+                      </div>
+
+                    </div>
+                    
+                    
+                    </div>
+
+                    <!-- wahab  Theme page design -->
+                    <div class="tab-pane fade" id="vert-tabs-Theme" role="tabpanel" aria-labelledby="vert-tabs-Theme-tab">
+                      <div class="card-outline">
+                          <div class="card-header">
+                            <h2 class="card-title m-0 text-danger text">Facebook</h2><br/>
+                            <p class="mt-2">Share your reviews on Facebook</p>
+                          </div>
+                          <div class="card-body">
+                            <p class="card-text mt-2">When you write new reviews, automatically have Yelp post an excerpt of your reviews to Facebook.
+                              <br/><span class="mt-2">You will always have an option not to post a review to Facebook. </span></p>
+                            <a href="#" class="btn btn-primary" style="font-weight: bold;"><i class="fa-brands fa-facebook-f" style="width: 30px;"></i>Connect To Facebook</a>
+                          </div>
+                        </div>
+                        <div class="card-outline">
+                          <div class="card-header">
+                            <h2 class="card-title m-0 text-danger text">Google</h2><br/>
+                            <p class="mt-2">Connect to Google</p>
+                          </div>
+                          <div class="card-body">
+                            <p class="card-text" style="font-weight: bold;" ><i class="fa-solid fa-check text-succes"></i> You're connected to Google</p>
+                            <a href="#" class="btn btn-default" style="font-weight: bold;"><i class="fa-brands fa-google" style="width: 30px;"></i></i>Disconnect To Google</a>
+                          </div>
+                        <div class="card-outline">
+                          <div class="card-header">
+                            <h2 class="card-title m-0 text-danger text">Apple</h2><br/>
+                            <p class="mt-2">Connect to Apple</p>
+                          </div>
+                          <a href="#" class=" btn1 btn btn-dark" style="font-weight: bold; margin-top: 10px; margin-left: 20px;"><i class="fa-brands fa-apple" style="color: #ffffff; width: 30px;"></i></i>Disconnect To Google</a>
+                        </div>
+                      </div>
+                   
+                  
+
+                     </div>
+
+      
+            </div>
+         </div>
+        
+      </div>
+</div>
+
+
+      
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+     
+</body>
+</html>
