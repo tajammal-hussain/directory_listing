@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<primary lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AdminLTE 3 | Editors</title>
+    <title>AdminLTE 3 | Advanced form elements</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link
@@ -15,18 +15,46 @@
       rel="stylesheet"
       href="../../plugins/fontawesome-free/css/all.min.css"
     />
-    <!-- Theme style -->
-    <link rel="stylesheet" href="../../dist/css/adminlte.min.css" />
-    <!-- summernote -->
+    <!-- daterange picker -->
     <link
       rel="stylesheet"
-      href="../../plugins/summernote/summernote-bs4.min.css"
+      href="../../plugins/daterangepicker/daterangepicker.css"
     />
-    <!-- CodeMirror -->
-    <link rel="stylesheet" href="../../plugins/codemirror/codemirror.css" />
-    <link rel="stylesheet" href="../../plugins/codemirror/theme/monokai.css" />
-    <!-- SimpleMDE -->
-    <link rel="stylesheet" href="../../plugins/simplemde/simplemde.min.css" />
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link
+      rel="stylesheet"
+      href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css"
+    />
+    <!-- Bootstrap Color Picker -->
+    <link
+      rel="stylesheet"
+      href="../../plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css"
+    />
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link
+      rel="stylesheet"
+      href="../../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"
+    />
+    <!-- Select2 -->
+    <link rel="stylesheet" href="../../plugins/select2/css/select2.min.css" />
+    <link
+      rel="stylesheet"
+      href="../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css"
+    />
+    <!-- Bootstrap4 Duallistbox -->
+    <link
+      rel="stylesheet"
+      href="../../plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css"
+    />
+    <!-- BS Stepper -->
+    <link
+      rel="stylesheet"
+      href="../../plugins/bs-stepper/css/bs-stepper.min.css"
+    />
+    <!-- dropzonejs -->
+    <link rel="stylesheet" href="../../plugins/dropzone/min/dropzone.min.css" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css" />
   </head>
   <body class="hold-transition sidebar-mini">
     <div class="wrapper">
@@ -487,13 +515,13 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="../forms/advanced.html" class="nav-link">
+                    <a href="../forms/advanced.html" class="nav-link active">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Advanced Elements</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="../forms/editors.html" class="nav-link active">
+                    <a href="../forms/editors.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Editors</p>
                     </a>
@@ -935,13 +963,7 @@
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1>Edit FAQ Page Information</h1>
-              </div>
-              <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
-                  <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item active">Faq Page Info</li>
-                </ol>
+                <h4>Add Listing Category</h4>
               </div>
             </div>
           </div>
@@ -950,137 +972,231 @@
 
         <!-- Main content -->
         <section class="content">
-          <div>
-            <div class="card-title">Name</div>
-            <input
-              type="text"
-              class="form-control mb-4"
-              placeholder="FAQ"
-              aria-label="Username"
-              aria-describedby="basic-addon1"
-            />
-          </div>
-
-          <!-- /.card-header -->
-          <div class="card-body" style="padding: 0%">
-            <span style="font-size: large">Details</span>
-            <textarea id="summernote">
- 
-                Place <em>some</em> <u>text</u> <strong>here</strong><br />
-                <strong>3) Are there any special rates or discounts available?</strong><br />
-For plumbers listed here, we offer a special 25% discount voucher to work with a Local Business Agency we partnered with. For customers, there may be some plumbers who offer discounts, bundled service packages, or special promotions. You can browse individual plumber profiles to find deals relevant to you.<br />
-<strong>4)What types of plumbing services do the listed companies offer?</strong> <br />
-Plumbers listed here offer a full range of services like repairs, installations, maintenance, gas work, drainage, etc.<br />
-<strong>5) What should I do in a plumbing emergency?</strong><br />
-Emergencies can be stressful. Just use our filter on the Listing page and search for plumbers in your area or nearby. There will be many who offer emergency services.<br />
-
-              </textarea
-            >
-          </div>
-
-          <!-- <div class="checkbox" style="display: inline-block;"><label class="unselectable"><input id="chkAlreadyDelivered" type="checkbox" checked=""> Skrij že oddane količine</label></div>
-<button class="btn btn-primary" style="display: inline-block;">Natisni</button>
-<div class="checkbox" style="display: inline-block;"><label class="unselectable"><input id="chkAlreadyDelivered" type="checkbox" checked=""> Natisni artikle iz privzete ponudbe</label></div> -->
-          <div
-            class=""
-            style="
-              width: 250px;
-              display: flex;
-              align-items: center;
-              justify-content: space-around;
-            "
-          >
-            <span style="font-weight: bolder">Status</span>
-            <!-- <input type="checkbox" id="Check1" value="Show" onclick="selectOnlyThis(this.id)" >Show</input>
-                    <input type="checkbox" id="Check2" value="Hide" onclick="selectOnlyThis(this.id)" >Hide</input> -->
-            <div class="custom-control custom-radio">
-              <input
-                class="custom-control-input custom-control-input-primary custom-control-input-outline"
-                type="radio"
-                id="customRadio5"
-                name="customRadio2"
-              />
-              <label for="customRadio5" class="custom-control-label"
-                >show</label
-              >
-            </div>
-            <div class="custom-control custom-radio">
-              <input
-                class="custom-control-input custom-control-input-primary custom-control-input-outline"
-                type="radio"
-                id="customRadio4"
-                name="customRadio2"
-              />
-              <label for="customRadio4" class="custom-control-label"
-                >hide</label
-              >
-            </div>
-          </div>
-
-          <!-- /.col-->
-
-          <!-- ./row -->
-          <div class="row">
-            <div class="col-md-12">
-              <div class="card" style="margin-top: 4px">
-                <div>
-                  <span
-                    style="
-                      color: #5480d7;
-                      padding-left: 2px;
-                      background-color: #f1f1f1;
-                      display: block;
-                      height: 35px;
-                      font-size: large;
-                      display: flex;
-                      justify-content: center;
-                    "
-                  >
-                    SEO Information
-                  </span>
+          <div class="container-fluid">
+            <!-- SELECT2 EXAMPLE -->
+            <div class="card card-default">
+              <div class="card-header">
+                <div class="card-tools">
+                  <a href="#" class="btn btn-primary">
+                    <i class="fa fa-plus"></i> Veiw All
+                  </a>
                 </div>
-                <div class="card-header">
-                  <label for="Title">Title</label>
-                  <input
-                    type="text"
-                    class="form-control mb-4"
-                    width="50%"
-                    placeholder="FAQ"
-                    aria-label="FAQ"
-                    aria-describedby="basic-addon1"
-                  />
-                  <label for="Meta">Meta Discription</label>
-                  <textarea
-                    class="form-control mb-4"
-                    width="50%"
-                    style="height: 150px"
-                    placeholder="FAQ Meta Discription"
-                    aria-label="meta"
-                    aria-describedby="basic-addon1"
-                  >
-                  </textarea>
-                </div>
-                <div class="card-header">
-                  <button type="submit" class="btn btn-success">Update</button>
-                </div>
-                <!-- /.card-header -->
               </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div>
+                        <label for="exampleInputEmail1">Name *</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="exampleInputEmail1"
+                          placeholder="Enter Name"
+                        />
+                      </div>
+                      <div>
+                        <label for="exampleInputEmail1">Detailed Name *</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="exampleInputEmail1"
+                          placeholder="Enter Detailed Name"
+                        />
+                      </div>
+                      <div>
+                        <label for="exampleInputEmail1">Slug</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="exampleInputEmail1"
+                          placeholder=""
+                        />
+                      </div>
+                      <div>
+                        <label for="exampleInputEmail1">Photo *</label>
+
+                        <input
+                          type="file"
+                          class="border-0 pl-0 form-control"
+                          id="exampleInputEmail1"
+                          placeholder=""
+                        />
+                      </div>
+                      <div>
+                        <label>Listing Category Color</label>
+
+                        <input
+                          placeholder="FFFFFF"
+                          type="text"
+                          class="form-control my-colorpicker1"
+                        />
+                      </div>
+                      <div>
+                        <label>Parent category</label>
+                        <select
+                          class="form-control select2"
+                          style="width: 100%"
+                        >
+                          <option selected="selected">Select Category</option>
+                          <option>Plumbing Heating</option>
+                          <option>Plumbing Supply</option>
+                          <option>Drainage Services</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Other Details-->
+              <div
+                class="card-header border-0 px-0"
+                style="background-color: #f8f9fc"
+              >
+                <h3 class="card-title text-primary px-4">Other Details</h3>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <div>
+                    <label for="exampleInputEmail1">Photo *</label>
+
+                    <input
+                      type="file"
+                      class="border-0 pl-0 form-control"
+                      id="exampleInputEmail1"
+                      placeholder=""
+                    />
+                  </div>
+                  <div>
+                    <label for="exampleInputEmail1">Title</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      placeholder="Enter Title"
+                    />
+                    <label class="pt-2" for="other_detail_textarea"
+                      >Description</label
+                    >
+                    <textarea
+                      class="form-control"
+                      name="other_detail_textarea"
+                      id=""
+                      cols="153"
+                      rows="5"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+              <!--Other Details-->
+              <!--Footer Details-->
+              <div
+                class="card-header border-0 px-0"
+                style="background-color: #f8f9fc"
+              >
+                <h3 class="card-title text-primary px-4">Footer Detail</h3>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <div>
+                    <label for="exampleInputEmail1">Photo *</label>
+
+                    <input
+                      type="file"
+                      class="border-0 pl-0 form-control"
+                      id="exampleInputEmail1"
+                      placeholder=""
+                    />
+                  </div>
+                  <div>
+                    <label for="exampleInputEmail1">Title</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      placeholder="Enter Title"
+                    />
+                    <label class="pt-2" for="other_detail_textarea"
+                      >Description</label
+                    >
+                    <textarea
+                      class="form-control"
+                      name="other_detail_textarea"
+                      id=""
+                      cols="153"
+                      rows="5"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+              <!--Footer Details-->
+              <!--Meta-->
+              <div
+                class="card-header border-0 px-0"
+                style="background-color: #f8f9fc"
+              >
+                <h3 class="card-title text-primary px-4">Meta</h3>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <div>
+                    <label for="meta_textarea"> Meta</label>
+                    <textarea
+                      class="form-control"
+                      name="meta_textarea"
+                      id=""
+                      cols="153"
+                      rows="5"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+              <!--Meta-->
+              <!--Seo-->
+              <div
+                class="card-header border-0 px-0"
+                style="background-color: #f8f9fc"
+              >
+                <h3 class="card-title text-primary px-4">SEO Information</h3>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <div>
+                    <label for="exampleInputEmail1">Title</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      placeholder="Enter Title"
+                    />
+                    <label class="pt-2" for="other_detail_textarea"
+                      >Description</label
+                    >
+                    <textarea
+                      class="form-control"
+                      name="other_detail_textarea"
+                      id=""
+                      cols="153"
+                      rows="5"
+                    ></textarea>
+
+                    <button class="btn btn-success mt-2" type="submit">
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!--Seo-->
+              <!-- /.card-body -->
             </div>
-            <!-- /.col-->
+            <!-- /.card -->
           </div>
-          <!-- ./row -->
+          <!-- /.container-fluid -->
         </section>
         <!-- /.content -->
       </div>
       <!-- /.content-wrapper -->
-      <footer class="main-footer">
-        <div class="float-right d-none d-sm-block"><b>Version</b> 3.2.0</div>
-        <strong
-          >Copyright &copy; 2014-2021
-          <a href="https://adminlte.io">AdminLTE.io</a>.</strong
-        >
-        All rights reserved.
-      </footer>
 
       <!-- Control Sidebar -->
       <aside class="control-sidebar control-sidebar-dark">
@@ -1094,43 +1210,20 @@ Emergencies can be stressful. Just use our filter on the Listing page and search
     <script src="../../plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
     <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Select2 -->
+    <script src="../../plugins/select2/js/select2.full.min.js"></script>
+    <script src="../../plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
     <!-- AdminLTE App -->
     <script src="../../dist/js/adminlte.min.js"></script>
-    <!-- Summernote -->
-    <script src="../../plugins/summernote/summernote-bs4.min.js"></script>
-    <!-- CodeMirror -->
-    <script src="../../plugins/codemirror/codemirror.js"></script>
-    <script src="../../plugins/codemirror/mode/css/css.js"></script>
-    <script src="../../plugins/codemirror/mode/xml/xml.js"></script>
-    <script src="../../plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="../../dist/js/demo.js"></script>
     <!-- Page specific script -->
     <script>
       $(function () {
-        // Summernote
-        $("#summernote").summernote({
-          height: 300, // set min-height to 300px
-        });
-
-        // CodeMirror
-        CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
-          mode: "htmlmixed",
-          theme: "monokai",
-        });
+        //Initialize Select2 Elements
+        $(".select2").select2();
+        $(".my-colorpicker1").colorpicker();
       });
-      function selectOnlyThis(id) {
-        for (var i = 1; i <= 4; i++) {
-          if (
-            "Check" + i === id &&
-            document.getElementById("Check" + i).checked === true
-          ) {
-            document.getElementById("Check" + i).checked = true;
-          } else {
-            document.getElementById("Check" + i).checked = false;
-          }
-        }
-      }
     </script>
   </body>
-</primary
+</html>

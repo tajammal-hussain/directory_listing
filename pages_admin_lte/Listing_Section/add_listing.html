@@ -3,23 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Pace</title>
+  <title>AdminLTE 3 | Editors</title>
 
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
-  <!-- pace-progress -->
-  <link rel="stylesheet" href="../../plugins/pace-progress/themes/black/pace-theme-flat-top.css">
-  <!-- adminlte-->
-  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
-<body class="hold-transition sidebar-mini pace-primary">
-<!-- Site wrapper -->
+   <!-- Google Font: Source Sans Pro -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+   <!-- Theme style -->
+   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+   <link rel="stylesheet" href="../../plugins/summernote/summernote-bs4.min.css">
+ </head>
+<style>
+ 
+  .nav-tabs {
+      border-right: none;
+  }
+  #vert-tabs-tab.nav-tabs {
+      border-right: none;
+      border-radius: 14px;
+  } 
+  
+     .nav-link1{
+        background-color: rgb(226, 223, 223);
+  
+        width: 180px;
+        margin-left: 240px;
+       border-radius: 5px;
+        font-size: larger;
+      } 
+       .nav-link1.active{
+        background-color: rgb(127, 127, 252);
+        color: white;
+       
+  } 
+ 
+  </style>
+<body class="hold-transition sidebar-mini ">
 <div class="wrapper">
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light ">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -385,8 +407,8 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-edit"></i>
               <p>
                 Forms
@@ -407,7 +429,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../forms/editors.html" class="nav-link">
+                <a href="../forms/editors.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Editors</p>
                 </a>
@@ -575,8 +597,8 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
               <i class="nav-icon far fa-plus-square"></i>
               <p>
                 Extras
@@ -685,7 +707,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../examples/pace.html" class="nav-link active">
+                <a href="../examples/pace.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Pace</p>
                 </a>
@@ -830,99 +852,378 @@
     </div>
     <!-- /.sidebar -->
   </aside>
-
-  <!-- Content Wrapper. Contains page content -->
-  <!-- main -->
-  <div class="content-wrapper">
-
-          <section class="content-header">
-           <div class="container-fluid">
-           <div class="row mb-2">
-            <div class="col-sm-6">
-            <h1>Dashboard</h1>
-            </div>
-             <div class="col-sm-6">
-             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Pace</li>
-               </ol>
-              </div>
-              </div>
-              </div>
-             </section>
-              <div>
-                <div class="bg-white rounded border ml-5 " style="height: 590px; width: 1000px;">
-                <!-- our section -->  
-            <div class=" d-flex " style="margin-left:  70px;" >
-                  <div class="text-bg-danger p-3 mt-5 " style="background-color: blue; color: white; width: 400px; border-radius: 6px;">Active Listing Items <h1>2</h1></div>
-                  <div class="text-bg-secondary p-3 mt-5  ml-5" style="background-color: green; color: white; width: 400px;  border-radius: 6px;">Pending Listing Items<h1>0</h1></div>
-            </div>
-
-            <div >
-              <!-- table data -->
-              <div class="col-md-6 ml-5 " style="margin-top: 40px;" >
-                <div class="card ml-2" style="width: 850px; background-color:white;">
-                  <!-- /.card-header -->
-                  <div class="card-body " style="width: 840px;">
-                    <table class="table table-bordered ">
-                    
-                      <tbody >
-                        <tr >
-                          <td style="width: 350px;" class="border border-dark" >
-                            Active Package Name</td>
-                          <td class="border border-dark">Free</td>
-                        </tr>
-                        <tr>
-                          <td class="border border-dark">Package Start Date</td>
-                          <td class="border border-dark">21 February, 2024</td>
-                       
-                        </tr>
-                        <tr>
-                          <td class="border border-dark">Package End Date</td>
-                          <td class="border border-dark">22 February, 2024</td>
-                        </tr>
-                        <tr>
-                          <td class="border border-dark">Listing Allowed</td>
-                          <td class="border border-dark">1</td>
-                        </tr>
-                        <tr>
-                          <td class="border border-dark">Days Remaining</td>
-                          <td class="border border-dark">	Expired</td>
-                        </tr>
-                        <tr>
-                          <td class="border border-dark">Featured Listing Allowed?</td>
-                          <td class="border border-dark">No</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <!-- /.card-body -->
-                 
-                </div>
-                <!-- /.card -->
-    
-           
-              </div>
-                 <!-- table data -->
-              </div>
-            </div>
-                 <!-- our section -->
-   
-  </div>
-  <!-- main -->
+  <div class="card-body " style="margin-left: 30px; border-radius: 5px; ">
+    <div class="row " >
  
+      <div class="col-5 col-sm-3 " >
+        <div class="nav flex-column nav-tabs h-100" id="vert-tabs-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link1 px-1 " id="vert-tabs-main-tab" data-toggle="pill" href="#vert-tabs-main" role="tab" aria-controls="vert-tabs-main" aria-selected="true">Main Section</a>
+          <a class="nav-link1  mt-2 px-1" id="vert-tabs-media-tab" data-toggle="pill" href="#vert-tabs-media" role="tab" aria-controls="vert-tabs-media" aria-selected="false">Social Media</a>
+          <a class="nav-link1  mt-2 px-1" id="vert-tabs-amenity-tab" data-toggle="pill" href="#vert-tabs-amenity" role="tab" aria-controls="vert-tabs-amenity" aria-selected="false">Amenity</a>
+          <a class="nav-link1  mt-2 px-1" id="vert-tabs-photo-tab" data-toggle="pill" href="#vert-tabs-photo" role="tab" aria-controls="vert-tabs-photo" aria-selected="false">Photo Gallery</a>
+          <a class="nav-link1  mt-2 px-1" id="vert-tabs-video-tab" data-toggle="pill" href="#vert-tabs-video" role="tab" aria-controls="vert-tabs-video" aria-selected="false">Video Gallery</a>
 
-<!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- pace-progress -->
-<script src="../../plugins/pace-progress/pace.min.js"></script>
-<!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
+        
+           <a class="nav-link1 mt-2 px-1" id="vert-tabs-feature-tab" data-toggle="pill" href="#vert-tabs-feature" role="tab" aria-controls="vert-tabs-feature" aria-selected="true">Additional Features</a>
+           <a class="nav-link1 mt-2 px-1" id="vert-tabs-seo-tab" data-toggle="pill" href="#vert-tabs-seo" role="tab" aria-controls="vert-tabs-seo" aria-selected="false">SEO</a>
+           <a class="nav-link1 mt-2 px-1" id="vert-tabs-status-tab" data-toggle="pill" href="#vert-tabs-status" role="tab" aria-controls="vert-tabs-status" aria-selected="false">Status & Featured</a>
+          <a class="nav-link1  mt-2 px-1" id="vert-tabs-hour-tab" data-toggle="pill" href="#vert-tabs-hour" role="tab" aria-controls="vert-tabs-hour" aria-selected="false">Opening Hours</a>
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        </div>
+      </div>
 
+      <div class="col-7 col-sm-9">
+        <div class="tab-content " id="vert-tabs-tabContent">
+                 <!-- one -->
+                  <div class="tab-pane text-left fade show active "  id="vert-tabs-main" role="tabpanel" aria-labelledby="vert-tabs-logo-tab">
+               <div style="display: flex;">
+                   <div class="form-group" style="margin-left: 150px;">
+                     <label for="exampleInputEmail1">Name</label>
+                     <input type="email" class="form-control h-50"  style="width: 350px;" id="exampleInputEmail1" >
+                   </div>
+                   <div class="form-group " style="margin-left: 70px;">
+                     <label for="exampleInputEmail1">Slug</label>
+                     <input type="email" class="form-control h-50"  style="width: 350px;" id="exampleInputEmail1" >
+                   </div> 
+               </div>
+          
+                 <div class="row "  style="margin-left: 145px;">
+                   <div class="col-md-12">
+                     <div class="card card-outline card-info">
+                       <div class="card-header">
+                         <h3 class="card-title">
+                           Description*
+                         </h3>
+                       </div>
+                      
+                       <div class="card-body ">
+                         <textarea id="summernote">
+                      
+                         </textarea>
+                       </div>
+                      
+                     </div>
+                
+                 </div>
+                 <div style="display: flex;">
+                       <div>
+                         <div class="form-group w-100">
+                           <label>Minimal</label>
+                           <select class="form-control select2" style="width: 100%;">
+                             <option selected="selected">Alabama</option>
+                             <option>Alaska</option>
+                             <option>California</option>
+                             <option>Delaware</option>
+                             <option>Tennessee</option>
+                             <option>Texas</option>
+                             <option>Washington</option>
+                           </select>
+                         </div>
+                         <div class="form-group w-100">
+                           <label>Address</label>
+                           <textarea class="form-control" rows="3" ></textarea>
+                         </div>  
+                         <div class="form-group w-100">
+                           <label>Email</label>
+                           <textarea class="form-control" rows="3" ></textarea>
+                         </div> 
+                         <div class="form-group">
+                           <label for="exampleInputEmail1">Slug</label>
+                           <input type="email" class="form-control h-50"  style="width: 300px;" id="exampleInputEmail1" >
+                         </div>  
+                         <div class="form-group w-100">
+                           <label>Map(iFrame Code)</label>
+                           <textarea class="form-control" rows="3" ></textarea>
+                         </div>
+                         <div>
+                         <label>Featured Photo*</label><br>
+                         <input type="file"/> 
+                         </div> 
+                         <div class="form-group">
+                           <label for="exampleInputEmail1">Slug</label>
+                           <input type="email" class="form-control " placeholder="FFFFFFFF"  style="width: 100%" id="exampleInputEmail1" >
+                         </div> 
+                     </div>
+                     <div>
+                       <div class="form-group ml-5">
+                         <label>Minimal</label>
+                         <select class="form-control select2" style="width: 100%;">
+                           <option selected="selected">Alabama</option>
+                           <option>Alaska</option>
+                           <option>California</option>
+                           <option>Delaware</option>
+                           <option>Tennessee</option>
+                           <option>Texas</option>
+                           <option>Washington</option>
+                         </select>
+                       </div>
+                       <div class="form-group  ml-5">
+                         <label>Address</label>
+                         <textarea class="form-control " style="width: 400px;" rows="3" ></textarea>
+                       </div>  
+                       <div class="form-group  ml-5">
+                         <label>Address</label>
+                         <textarea class="form-control" rows="3" ></textarea>
+                       </div>  
+                 </div>
+           </div> 
+       </div>
+     </div> 
+      <!-- one -->
+         <!-- third -->
+<div class="tab-pane fade " id="vert-tabs-media"role="tabpanel" aria-labelledby="vert-tabs-media-tab">
+         <label class="text-blue " style="margin-left: 120px;">Social Icons</label>
+         <hr class="w-75"/>
+     <div class="d-flex flex-row"> 
+           <div class="form-group  w-25" style="margin-left: 120px;" >
+              <select class="form-control select2" >
+              <option selected="selected">Alabama</option>
+              <option>Alaska</option>
+              <option>California</option>
+              <option>Delaware</option>
+              <option>Tennessee</option>
+              <option>Texas</option>
+              <option>Washington</option>
+             </select>
+             </div>
+             <div class="form-group w-50 ml-2" >
+             
+               <input type="email" class="form-control " placeholder="FFFFFFFF" id="exampleInputEmail1" >
+             </div> 
+             <div>
+               <ul class="nav nav-pills ml-auto p-2 " style="margin-top: -10px;">
+                 <li class="nav-item"><a class="nav-link active" href="#tab_1" data-toggle="tab">+</a></li>
+                 <li class="nav-item dropdown">
+                 </li>
+               </ul>
+                    </div>
+     </div>   
+</div>
+         <!-- third -->
+         <!-- four -->
+         <div class="tab-pane fade " id="vert-tabs-amenity"role="tabpanel" aria-labelledby="vert-tabs-amenity-tab">
+           <label class="text-blue" style="margin-left: 120px;">Amenity</label>
+           <hr class="w-75"/>
+          </div>
+         <!-- four -->
+         <!-- five -->
+   <div class="tab-pane fade " id="vert-tabs-photo"role="tabpanel" aria-labelledby="vert-tabs-photo-tab">
+     <label class="text-blue" style="margin-left: 120px;">Photos</label>
+  <hr class="w-75"/>
+         <div class="d-flex col" style="margin-left: 110px;">
+               <div>
+          <form>
+           <input type="file">
+           </form>
+               </div>
+               <div>
+           <ul class="nav nav-pills ml-auto p-2 " style="margin-top: -10px;">
+             <li class="nav-item"><a class="nav-link active" href="#tab_1" data-toggle="tab">+</a></li>
+             <li class="nav-item dropdown">
+             </li>
+           </ul>
+                </div>
+         </div>
+   </div>
+         <!-- five -->
+         <!-- six -->
+<div class="tab-pane fade " id="vert-tabs-video"role="tabpanel" aria-labelledby="vert-tabs-photo-tab">
+          <label style="margin-left: 120px; color: blue;">
+           Videos
+           </label>
+           <hr class="w-75"/>
+     <div class="d-flex row" style="margin-left: 110px;">
+           <div class="form-group w-50 ml-2" >
+             <input type="email" class="form-control " placeholder="You Tube Videos ID" id="exampleInputEmail1" >
+           </div>
+           <div class="ml-5">
+             <ul class="nav nav-pills ml-auto p-2 " style="margin-top: -10px;">
+               <li class="nav-item"><a class="nav-link active" href="#tab_1" data-toggle="tab">+</a></li>
+               <li class="nav-item dropdown">
+               </li>
+             </ul>
+                  </div>
+   </div>
+</div>
+         <!-- six -->
+         <!-- seven -->
+<div class="tab-pane fade " id="vert-tabs-feature"role="tabpanel" aria-labelledby="vert-tabs-photo-tab">
+              <label class=" text-blue" style="margin-left: 110px;"> Additional Features</label>
+              <hr class="w-75"/>
+         <div class="d-flex " style="margin-left: 100px;" >
+               <div class="form-group w-50 ml-2" >
+               <input type="email" class="form-control " placeholder="FFFFFFFF" id="exampleInputEmail1" >
+               </div> 
+               <div class="form-group w-50 ml-2" >
+               <input type="email" class="form-control " placeholder="FFFFFFFF" id="exampleInputEmail1" >
+               </div> 
+               <div>
+                 <ul class="nav nav-pills ml-auto p-2 " style="margin-top: -10px;">
+                   <li class="nav-item"><a class="nav-link active" href="#tab_1" data-toggle="tab">+</a></li>
+                   <li class="nav-item dropdown">
+                   </li>
+                 </ul>
+                 </div>
+         </div> 
+         <div class="d-flex"  style="margin-left: 100px;">
+           <div class="form-group w-50 ml-2" >
+           <input type="email" class="form-control " placeholder="FFFFFFFF" id="exampleInputEmail1" >
+           </div> 
+           <div class="form-group w-50 ml-2" >
+           <input type="email" class="form-control " placeholder="FFFFFFFF" id="exampleInputEmail1" >
+           </div> 
+           <div>
+             <ul class="nav nav-pills ml-auto p-2 " style="margin-top: -10px;">
+               <li class="nav-item"><a class="nav-link active" href="#tab_1" data-toggle="tab">+</a></li>
+               <li class="nav-item dropdown">
+               </li>
+             </ul>
+             </div>
+         </div>
+         <div class="d-flex" style="margin-left: 100px;">
+           <div class="form-group w-50 ml-2" >
+           <input type="email" class="form-control " placeholder="FFFFFFFF" id="exampleInputEmail1" >
+           </div> 
+           <div class="form-group w-50 ml-2" >
+           <input type="email" class="form-control " placeholder="FFFFFFFF" id="exampleInputEmail1" >
+           </div> 
+           <div>
+             <ul class="nav nav-pills ml-auto p-2 " style="margin-top: -10px;">
+               <li class="nav-item"><a class="nav-link active" href="#tab_1" data-toggle="tab">+</a></li>
+               <li class="nav-item dropdown">
+               </li>
+             </ul>
+             </div>
+          </div>  
+</div>
+         <!-- seven -->
+         <!-- Eight -->
+<div class="tab-pane fade " id="vert-tabs-seo"role="tabpanel" aria-labelledby="vert-tabs-photo-tab">
+         <div class="form-group w-75 ml-2" >
+           <label style="margin-left: 110px;">Title</label>
+         <input type="email" style="margin-left: 110px;" class="form-control "  id="exampleInputEmail1" >
+         </div> 
+         <div class="form-group w-75">
+           <label style="margin-left: 115px;">Meta Description</label>
+           <textarea class="form-control" style="margin-left: 120px;" rows="3"></textarea>
+         </div>
+</div>
+         <!-- Eight -->
+         <!-- Ninth -->
+<div class="tab-pane fade " id="vert-tabs-status"role="tabpanel" aria-labelledby="vert-tabs-photo-tab"> 
+         <div class="form-group  w-50" >
+           <label style="margin-left: 115px;">Status</label>
+         <select class="form-control select2" style="margin-left: 120px;" >
+         <option selected="selected">Active</option>
+         <option>No Active</option>
+         </select>
+         </div>
+         <div class="form-group  w-50" >
+           <label style="margin-left: 115px;">Is Featured?</label>
+           <select class="form-control select2" style="margin-left: 120px;" >
+           <option selected="selected">Yes</option>
+           <option>No</option>
+           </select>
+           </div>
+</div>                     
+         <!-- Ninth -->
+         <!-- Ten -->
+<div class="tab-pane fade " id="vert-tabs-hour"role="tabpanel" aria-labelledby="vert-tabs-hour-tab">
+          <label style="margin-left: 120px; color: blue;">Opening  Hours</label>
+          <hr class="w-75" /> 
+          <div class="d-flex" style="margin-left: 110px;">
+                <div class="form-group w-50 ml-2" >
+                <label>Monday</label>
+                <input type="email" class="form-control " placeholder="FFFFFFFF" id="exampleInputEmail1" >
+                </div>
+                <div class="form-group w-50 ml-2" >
+                <label>Tuesday</label>
+                <input type="email" class="form-control " placeholder="FFFFFFFF" id="exampleInputEmail1" >
+                </div>  
+          </div>
+          <div class="d-flex" style="margin-left: 110px;">
+                <div class="form-group w-50 ml-2" >
+                <label>Wednesday</label>
+                <input type="email" class="form-control " placeholder="FFFFFFFF" id="exampleInputEmail1" >
+                </div>
+                <div class="form-group w-50 ml-2" >
+                <label>Thursday</label>
+                <input type="email" class="form-control " placeholder="FFFFFFFF" id="exampleInputEmail1" >
+                </div>  
+          </div>
+          <div class="d-flex" style="margin-left: 110px;">
+                <div class="form-group w-50 ml-2" >
+                <label>Friday</label>
+                <input type="email" class="form-control " placeholder="FFFFFFFF" id="exampleInputEmail1" >
+                </div>
+                <div class="form-group w-50 ml-2" >
+                <label>Saturday</label>
+                <input type="email" class="form-control " placeholder="FFFFFFFF" id="exampleInputEmail1" >
+                </div>  
+          </div>
+          <div class="d-flex" style="margin-left: 110px;">
+               <div class="form-group w-50 ml-2" >
+                <label>Sunday</label>
+                <input type="email" class="form-control " placeholder="FFFFFFFF" id="exampleInputEmail1" >
+                </div>
+          </div>
+
+</div>
+         <!-- Ten -->
+</div>
+</div>
+</div>
+</div>
+                     
+
+<td class="d-flex justify-content-center">
+<button type="button" class="btn btn-block bg-gradient-success btn-sm   " style=" margin-top: 50px; margin-bottom:2400px;">Submit</button>
+</td>
+
+  <script src="../../plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Select2 -->
+  <script src="../../plugins/select2/js/select2.full.min.js"></script>
+  <!-- Bootstrap4 Duallistbox -->
+  <script src="../../plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+  <!-- InputMask -->
+  <script src="../../plugins/moment/moment.min.js"></script>
+  <script src="../../plugins/inputmask/jquery.inputmask.min.js"></script>
+  <!-- date-range-picker -->
+  <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- bootstrap color picker -->
+  <script src="../../plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="../../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Bootstrap Switch -->
+  <script src="../../plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+  <!-- BS-Stepper -->
+  <script src="../../plugins/bs-stepper/js/bs-stepper.min.js"></script>
+  <!-- dropzonejs -->
+  <script src="../../plugins/dropzone/min/dropzone.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="../../dist/js/adminlte.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="../../dist/js/demo.js"></script>
+  <!-- Page specific script -->
+  <script src="../../plugins/summernote/summernote-bs4.min.js"></script>
+
+<script>
+  
+$("input[data-bootstrap-switch]").each(function () {
+          $(this).bootstrapSwitch("state", $(this).prop("checked"));
+        });
+        $(function () {
+    // Summernote
+    $('#summernote').summernote()
+
+    // CodeMirror
+    CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
+      mode: "htmlmixed",
+      theme: "monokai"
+    });
+  })
+  </script>
+</body>
 </html>

@@ -1544,7 +1544,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Pending Comments</h1>
+                            <h1>Add Category</h1>
                         </div>
 
                         <div class="col-sm-6">
@@ -1553,7 +1553,7 @@
                                     <a href="#">Home</a>
                                 </li>
 
-                                <li class="breadcrumb-item active">Pending Comments</li>
+                                <li class="breadcrumb-item active">Add Category</li>
                             </ol>
                         </div>
                     </div>
@@ -1569,101 +1569,85 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <!-- /.card-header -->
+                                <div
+                                    class="card-header d-flex p-2"
+                                    style="display: flex; justify-content: end;"
+                                >
+                                    <a
+                                        class="bg-primary rounded text-white py-1 px-2"
+                                        href="#"
+                                    >
+                                        <span class="fs-3 fw-bold">
+                                            <i class="fa fa-plus"></i>
+                                            View All
+                                        </span>
+                                    </a>
+                                </div>
 
                                 <div class="card-body">
-                                    <div class="tab-content">
-                                        <div
-                                            class="tab-pane active"
-                                            id="tab_1"
-                                        >
-                                            <!-- card-header -->
+                                    <div class="form-group">
+                                        <label
+                                            for="inputClientCompany"
+                                            class="text-muted"
+                                        >Name *</label>
 
-                                            <div class="card-tools">
-                                               
-                                            </div>
-
-                                            <table
-                                                id="example2"
-                                                class="table table-bordered table-hover"
-                                            >
-                                                <thead>
-                                                    <tr>
-                                                        <th>Serial</th>
-
-                                                        <th>Photo</th>
-
-                                                        <th>Title</th>
-
-                                                        <th>Category</th>
-
-                                                        <th>Action</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-
-                                                        <td>Test 1</td>
-
-                                                        <td>Test 1</td>
-
-                                                        <td>Test 1</td>
-
-                                                        <td class="project-actions text-left">
-                                                            <a
-                                                                class="btn btn-info btn-sm"
-                                                                href="#"
-                                                            >
-                                                                <i class="fas fa-pencil-alt"></i>
-                                                            </a>
-
-                                                            <a
-                                                                class="btn btn-danger btn-sm"
-                                                                href="#"
-                                                            >
-                                                                <i class="fas fa-trash"></i>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>2</td>
-
-                                                        <td>Test 2</td>
-
-                                                        <td>Test 2</td>
-
-                                                        <td>Test 2</td>
-
-                                                        <td class="project-actions text-left">
-                                                            <a
-                                                                class="btn btn-info btn-sm"
-                                                                href="#"
-                                                            >
-                                                                <i class="fas fa-pencil-alt"></i>
-                                                            </a>
-
-                                                            <a
-                                                                class="btn btn-danger btn-sm"
-                                                                href="#"
-                                                            >
-                                                                <i class="fas fa-trash"></i>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-
-                                        <!-- /.tab-pane -->
-
-
-                                        <!-- /.tab-pane -->
+                                        <input
+                                            type="text"
+                                            id="inputClientCompany"
+                                            class="form-control"
+                                        ></input>
                                     </div>
 
-                                    <!-- /.tab-content -->
+                                    <div class="form-group">
+                                        <label
+                                            for="inputProjectLeader"
+                                            class="text-muted"
+                                        >Slug</label>
+
+                                        <input
+                                            type="text"
+                                            id="inputProjectLeader"
+                                            class="form-control"
+                                        ></input>
+                                    </div>
+
+                                    <div
+                                        class="mx-n3 p-2 h5"
+                                        style="background-color: #E9ECEF; color: #1971c2; text-align: center;"
+                                    >SEO Information</div>
+
+                                    <div class="form-group">
+                                        <label
+                                            for="inputName"
+                                            class="text-muted"
+                                        >Title</label>
+
+                                        <input
+                                            type="text"
+                                            id="inputName"
+                                            class="form-control"
+                                        ></input>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label
+                                            for="inputDescription"
+                                            class="text-muted"
+                                        >Meta Description</label>
+
+                                        <textarea
+                                            id="inputDescription"
+                                            class="form-control"
+                                            rows="4"
+                                        ></textarea>
+                                    </div>
+
+                                    <div class="btn">
+                                        <button
+                                            type="button"
+                                            class="btn btn-block btn-success btn-md"
+                                        >Submit</button>
+                                    </div>
                                 </div>
 
                                 <!-- /.card-body -->
@@ -1736,23 +1720,5 @@
     <!-- AdminLTE for demo purposes -->
     <script src="../../dist/js/demo.js"></script>
     <!-- Page specific script -->
-
-    <script>
-        $(function () {
-      $("#example1").DataTable({
-        "responsive": true, "lengthChange": false, "autoWidth": false,
-        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-      $('#example2').DataTable({
-        "paging": true,
-        "lengthChange": true,
-        "searching": true,
-        "ordering": true,
-        "info": true,
-        "autoWidth": false,
-        "responsive": true,
-      });
-    });
-    </script>
 </body>
 </html>

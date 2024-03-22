@@ -3,20 +3,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Pace</title>
+  <title>AdminLTE 3 | Navbar & Tabs</title>
+
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
-  <!-- pace-progress -->
-  <link rel="stylesheet" href="../../plugins/pace-progress/themes/black/pace-theme-flat-top.css">
-  <!-- adminlte-->
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="../../plugins/sweetalert2/sweetalert2.min.css">
+  <!-- Toastr -->
+  <link rel="stylesheet" href="../../plugins/toastr/toastr.min.css">
+  <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="hold-transition sidebar-mini pace-primary">
-<!-- Site wrapper -->
+<style>
+ 
+  .nav-tabs {
+      border-right: none;
+  }
+  #vert-tabs-tab.nav-tabs {
+      border-right: none;
+      border-radius: 14px;
+  }
+  
+    .nav-link1{
+        background-color: rgb(226, 223, 223);
+       border-radius: 5px;
+        font-size: larger;
+  }
+  .nav-link1.active{
+    background-color: rgb(127, 127, 252);
+    color: white;
+  }
+ 
+  </style>
+  <body class="hold-transition sidebar-mini">
 <div class="wrapper">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -37,10 +60,10 @@
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
       <li class="nav-item">
-        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+        <a class="nav-link" data-widget="navbar-search" data-target="#main-header-search" href="#" role="button">
           <i class="fas fa-search"></i>
         </a>
-        <div class="navbar-search-block">
+        <div class="navbar-search-block" id="main-header-search">
           <form class="form-inline">
             <div class="input-group input-group-sm">
               <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
@@ -73,7 +96,9 @@
                   Brad Diesel
                   <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
                 </h3>
-                <p class="text-sm">Call me whenever you can...</p>
+                <p class="text-sm">Call me whenever you can
+
+                </p>
                 <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
               </div>
             </div>
@@ -326,8 +351,8 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-tree"></i>
               <p>
                 UI Elements
@@ -366,7 +391,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../UI/navbar.html" class="nav-link">
+                <a href="../UI/navbar.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Navbar & Tabs</p>
                 </a>
@@ -575,8 +600,8 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
               <i class="nav-icon far fa-plus-square"></i>
               <p>
                 Extras
@@ -685,7 +710,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../examples/pace.html" class="nav-link active">
+                <a href="../examples/pace.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Pace</p>
                 </a>
@@ -832,97 +857,206 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <!-- main -->
   <div class="content-wrapper">
-
-          <section class="content-header">
-           <div class="container-fluid">
-           <div class="row mb-2">
-            <div class="col-sm-6">
-            <h1>Dashboard</h1>
-            </div>
-             <div class="col-sm-6">
-             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Pace</li>
-               </ol>
-              </div>
-              </div>
-              </div>
-             </section>
-              <div>
-                <div class="bg-white rounded border ml-5 " style="height: 590px; width: 1000px;">
-                <!-- our section -->  
-            <div class=" d-flex " style="margin-left:  70px;" >
-                  <div class="text-bg-danger p-3 mt-5 " style="background-color: blue; color: white; width: 400px; border-radius: 6px;">Active Listing Items <h1>2</h1></div>
-                  <div class="text-bg-secondary p-3 mt-5  ml-5" style="background-color: green; color: white; width: 400px;  border-radius: 6px;">Pending Listing Items<h1>0</h1></div>
-            </div>
-
-            <div >
-              <!-- table data -->
-              <div class="col-md-6 ml-5 " style="margin-top: 40px;" >
-                <div class="card ml-2" style="width: 850px; background-color:white;">
-                  <!-- /.card-header -->
-                  <div class="card-body " style="width: 840px;">
-                    <table class="table table-bordered ">
-                    
-                      <tbody >
-                        <tr >
-                          <td style="width: 350px;" class="border border-dark" >
-                            Active Package Name</td>
-                          <td class="border border-dark">Free</td>
-                        </tr>
-                        <tr>
-                          <td class="border border-dark">Package Start Date</td>
-                          <td class="border border-dark">21 February, 2024</td>
-                       
-                        </tr>
-                        <tr>
-                          <td class="border border-dark">Package End Date</td>
-                          <td class="border border-dark">22 February, 2024</td>
-                        </tr>
-                        <tr>
-                          <td class="border border-dark">Listing Allowed</td>
-                          <td class="border border-dark">1</td>
-                        </tr>
-                        <tr>
-                          <td class="border border-dark">Days Remaining</td>
-                          <td class="border border-dark">	Expired</td>
-                        </tr>
-                        <tr>
-                          <td class="border border-dark">Featured Listing Allowed?</td>
-                          <td class="border border-dark">No</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <!-- /.card-body -->
-                 
-                </div>
-                <!-- /.card -->
-    
-           
-              </div>
-                 <!-- table data -->
-              </div>
-            </div>
-                 <!-- our section -->
+    <!-- Content Header (Page header) -->
    
-  </div>
-  <!-- main -->
- 
 
-<!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- pace-progress -->
-<script src="../../plugins/pace-progress/pace.min.js"></script>
-<!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- <div class="card card-primary card-outline"> -->
+              
+             
+              <!-- /.card -->
+            </div>
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- ./row -->   
+        <!-- tahir end of sidebar -->
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+       
+       <!-- tahir general setting -->
 
-</html>
+
+        <!-- /.row tahir -->
+        <!-- <div class="card card-primary card-outline"> -->
+          <div class="card-header">
+            <!-- <h3 class="card-title">
+              <i class="fas fa-edit"></i>
+              Vertical Tabs Examples
+            </h3> -->
+          </div>
+          <div class="card-body">
+            <h4>Edit Home Page Information</h4>
+            <div class="row">
+              <div class="col-5 col-sm-3">
+                <div class="nav flex-column nav-tabs h-100" id="vert-tabs-tab" role="tablist" aria-orientation="vertical"> 
+                  <!-- tahir home 1 to 6  -->
+                  
+                  <a class="nav-link1 px-1 " id="vert-tabs-logo-tab" data-toggle="pill" href="#vert-tabs-logo" role="tab" aria-controls="vert-tabs-logo" aria-selected="true">SEO Section</a>
+                  <a class="nav-link1  mt-2 px-1" id="vert-tabs-favicon-tab" data-toggle="pill" href="#vert-tabs-favicon" role="tab" aria-controls="vert-tabs-favicon" aria-selected="false">Search Section</a>
+                  <a class="nav-link1  mt-2 px-1" id="vert-tabs-footer-tab" data-toggle="pill" href="#vert-tabs-footer" role="tab" aria-controls="vert-tabs-footer" aria-selected="false">Image With Text</a>
+                  <a class="nav-link1  mt-2 px-1" id="vert-tabs-recaptcha-tab" data-toggle="pill" href="#vert-tabs-recaptcha" role="tab" aria-controls="vert-tabs-recaptcha" aria-selected="false">Image With Text 2</a>
+                  <a class="nav-link1  mt-2 px-1" id="vert-tabs-google-tab" data-toggle="pill" href="#vert-tabs-google" role="tab" aria-controls="vert-tabs-google" aria-selected="false">Category Section</a>
+                  <a class="nav-link1  mt-2 px-1" id="vert-tabs-chat-tab" data-toggle="pill" href="#vert-tabs-chat" role="tab" aria-controls="vert-tabs-chat" aria-selected="false">Listing Section</a>
+                  <a class="nav-link1 mt-2 px-1" id="vert-tabs-cookie-tab" data-toggle="pill" href="#vert-tabs-cookie" role="tab" aria-controls="vert-tabs-cookie" aria-selected="true">Location Section</a>
+
+                 
+                  </div>
+              </div>
+    
+              <div class="col-7 col-sm-9">
+                <div class="tab-content" id="vert-tabs-tabContent">
+                 
+                           
+                      <div class="tab-pane text-left fade " id="vert-tabs-logo" role="tabpanel" aria-labelledby="vert-tabs-logo-tab">
+                             
+                            <label for="exampleInputEmail1">Title</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Trusted Plumbers Direectory UK | ClicaPlumbers">
+      
+                            <label for="exampleInputEmail1">Meta Decription</label>
+                            <textarea class="form-control"  placeholder="At Clica Plumbers we conect you with skilled professional plumbers right un your neighbourhood ,ensuring quick response times aand familiarity with Your area's specific needs." id="floatingTextarea2" style="height: 60px"></textarea>
+      
+                      </div>
+            
+                    <div class="tab-pane fade" id="vert-tabs-favicon" role="tabpanel" aria-labelledby="vert-tabs-favicon-tab">
+                            
+                            <label for="exampleInputEmail1">Search Heading</label>
+                            <textarea class="form-control"  placeholder="Find Trusted Plumbers Nearby"id="floatingTextarea2" style="height: 70px"></textarea>
+
+      
+                            <label for="exampleInputEmail1">Search Text</label>
+                            <textarea class="form-control"   placeholder="Stop the stress and ditch theDIY despaire! Using Clica Plumbers directory to find the right plumbers near you is a breeze!" id="floatingTextarea2" style="height: 60px"></textarea>
+
+                            
+                            <label>Existing Search Background</label><br/>
+                        <img src="./tahir/Banner.jpg" alt="Banner.jpg">
+                            <label>Change Search Background</label><br/>
+                            <input type="file"/>
+                      </div>
+            
+                    <div class="tab-pane fade" id="vert-tabs-footer" role="tabpanel" aria-labelledby="vert-tabs-footer-tab">
+                          <label for="exampleInputEmail1">Title </label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="UK's Plumbing Directory">
+    
+                          <label for="exampleInputEmail1">Description</label>
+                          <div class="form-floating">
+                            <textarea class="form-control" placeholder="Want to connect with more users in your area who need your plumbing services? Ditch leaky pipes of traditional advertinsing and drive into Clica Plumbers, the plateform built to amplify your bussiness. We're not justanother directory ,we're your direct line to a steady stream of qualiified customers,ready to flow right" id="floatingTextarea2" style="height: 102px"></textarea>
+                            <!-- <label for="floatingTextarea2">Comments</label> -->
+                          </div>
+                          
+                          <label>Existing Image</label><br/>
+                          <i class="fa-solid fa-person text-xl text-purple"></i><br/>
+                          <label>Change Search Background</label><br/>
+                          <input type="file"/><br>
+
+                      <label for="exampleInputEmail1">Show Position</label><br>   
+                          
+                            <input type="radio" id="left" name="image" value="left" checked>
+                            <label for="left">Image Left</label>
+
+                            <input type="radio" id="right" name="image" value="right">
+                            <label for="right">Image Right</label>
+                         
+                          <br>            
+                          <label for="exampleInputEmail1">Link</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="https://www.clicaplumbers.co.uk/customer/login">
+                    </div> 
+          
+                     <div class="tab-pane fade" id="vert-tabs-recaptcha" role="tabpanel" aria-labelledby="vert-tabs-recaptcha-tab">
+                          <label for="exampleInputEmail1">Title </label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="UK's Plumbing Directory">
+    
+                          <label for="exampleInputEmail1">Description</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="tahir">
+                          
+                          <label>Existing Image</label><br/>
+                          <i class="fa-solid fa-person text-xl text-purple"></i><br/>
+                          <label>Change Search Background</label><br/>
+                          <input type="file"/><br>
+
+                          <label for="exampleInputEmail1">Show Position</label><br>   
+                          
+                            <input type="radio" id="left" name="image" value="left" checked>
+                            <label for="left">Image Left</label>
+
+                            <input type="radio" id="right" name="image" value="right">
+                            <label for="right">Image Right</label>
+                         
+                          <br> 
+                          <label for="exampleInputEmail1">Link</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="https://www.clicaplumbers.co.uk/customer/login">
+                          
+                      </div> 
+
+                    <div class="tab-pane fade" id="vert-tabs-google" role="tabpanel" aria-labelledby="vert-tabs-google-tab">
+                       
+                        <label for="exampleInputEmail1">Heading</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Categories">
+
+                        <label for="exampleInputEmail1">Subheading</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Please see all the listing categories from here">
+
+                        <label for="exampleInputEmail1">Total items</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="4">
+                        <label for="exampleInputEmail1">Status</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="show">
+
+                        <label for="exampleInputEmail1">Listing Counter</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Hide">
+                   </div>
+            
+                        <div class="tab-pane fade" id="vert-tabs-chat" role="tabpanel" aria-labelledby="vert-tabs-chat-tab">
+                              <label for="exampleInputEmail1">Heading</label>
+                              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Featured Listings">
+      
+                              <label for="exampleInputEmail1">Subheading</label>
+                              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="See all the popular listing from below">
+                              
+                              <label for="exampleInputEmail1">Status</label>
+                              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Show">
+      
+                         </div>
+    
+  
+                   
+
+                      <div class="tab-pane fade" id="vert-tabs-cookie" role="tabpanel" aria-labelledby="vert-tabs-cookie-tab">
+                        <label for="exampleInputEmail1">Heading</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Locations">
+
+                        <label for="exampleInputEmail1">Subheading</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder=" Please See all the listing locations from here">
+                        
+                        <label for="exampleInputEmail1">Total items</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="12">
+
+                        <label for="exampleInputEmail1">Status</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Show">
+
+                        <label for="exampleInputEmail1">Location Counter</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Hide">
+                      </div> 
+    
+                      
+                </div>
+             </div>
+             <td>
+              <button type="button" class="btn btn-block btn-success mt-4">Update</button>
+            </td>
+          </div>
+    
+    <!-- jQuery -->
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../../dist/js/demo.js"></script>
+         
+    </body>
+    </html>

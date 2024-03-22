@@ -3,20 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Pace</title>
+  <title>AdminLTE 3 | Advanced form elements</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
-  <!-- pace-progress -->
-  <link rel="stylesheet" href="../../plugins/pace-progress/themes/black/pace-theme-flat-top.css">
-  <!-- adminlte-->
-  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- daterange picker -->
+  <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Bootstrap Color Picker -->
+  <link rel="stylesheet" href="../plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="../plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+  <!-- Bootstrap4 Duallistbox -->
+  <link rel="stylesheet" href="../plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
+  <!-- BS Stepper -->
+  <link rel="stylesheet" href="../plugins/bs-stepper/css/bs-stepper.min.css">
+  <!-- dropzonejs -->
+  <link rel="stylesheet" href="../plugins/dropzone/min/dropzone.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition sidebar-mini pace-primary">
-<!-- Site wrapper -->
+<body class="hold-transition sidebar-mini">
 <div class="wrapper">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -26,7 +39,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="../../index3.html" class="nav-link">Home</a>
+        <a href="../index3.html" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -67,7 +80,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <img src="../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Brad Diesel
@@ -83,7 +96,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="../../dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="../dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   John Pierce
@@ -99,7 +112,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="../../dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="../dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Nora Silvester
@@ -385,8 +398,8 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-edit"></i>
               <p>
                 Forms
@@ -401,7 +414,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../forms/advanced.html" class="nav-link">
+                <a href="../forms/advanced.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Advanced Elements</p>
                 </a>
@@ -575,8 +588,8 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
               <i class="nav-icon far fa-plus-square"></i>
               <p>
                 Extras
@@ -685,7 +698,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../examples/pace.html" class="nav-link active">
+                <a href="../examples/pace.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Pace</p>
                 </a>
@@ -832,97 +845,187 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <!-- main -->
   <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Add Staff</h1>
+          </div>
+        
+      </div><!-- /.container-fluid -->
+    </section>
 
-          <section class="content-header">
-           <div class="container-fluid">
-           <div class="row mb-2">
-            <div class="col-sm-6">
-            <h1>Dashboard</h1>
-            </div>
-             <div class="col-sm-6">
-             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Pace</li>
-               </ol>
-              </div>
-              </div>
-              </div>
-             </section>
-              <div>
-                <div class="bg-white rounded border ml-5 " style="height: 590px; width: 1000px;">
-                <!-- our section -->  
-            <div class=" d-flex " style="margin-left:  70px;" >
-                  <div class="text-bg-danger p-3 mt-5 " style="background-color: blue; color: white; width: 400px; border-radius: 6px;">Active Listing Items <h1>2</h1></div>
-                  <div class="text-bg-secondary p-3 mt-5  ml-5" style="background-color: green; color: white; width: 400px;  border-radius: 6px;">Pending Listing Items<h1>0</h1></div>
-            </div>
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- SELECT2 EXAMPLE -->
+        <div class="card card-default">
+          <div class="card-header">
+        
 
-            <div >
-              <!-- table data -->
-              <div class="col-md-6 ml-5 " style="margin-top: 40px;" >
-                <div class="card ml-2" style="width: 850px; background-color:white;">
-                  <!-- /.card-header -->
-                  <div class="card-body " style="width: 840px;">
-                    <table class="table table-bordered ">
-                    
-                      <tbody >
-                        <tr >
-                          <td style="width: 350px;" class="border border-dark" >
-                            Active Package Name</td>
-                          <td class="border border-dark">Free</td>
-                        </tr>
-                        <tr>
-                          <td class="border border-dark">Package Start Date</td>
-                          <td class="border border-dark">21 February, 2024</td>
-                       
-                        </tr>
-                        <tr>
-                          <td class="border border-dark">Package End Date</td>
-                          <td class="border border-dark">22 February, 2024</td>
-                        </tr>
-                        <tr>
-                          <td class="border border-dark">Listing Allowed</td>
-                          <td class="border border-dark">1</td>
-                        </tr>
-                        <tr>
-                          <td class="border border-dark">Days Remaining</td>
-                          <td class="border border-dark">	Expired</td>
-                        </tr>
-                        <tr>
-                          <td class="border border-dark">Featured Listing Allowed?</td>
-                          <td class="border border-dark">No</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <!-- /.card-body -->
-                 
+            <div class="card-tools">
+              <a class="btn btn-primary " href=" 
+              #"><i class="fa fa-plus">  </i> View all</a>
+            </div>
+          </div>
+          <!-- /.card-header -->
+        
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                    <div>
+                    <label for="exampleInputEmail1" class="pt-2">Type *</label>
+                    <input type="name" class="form-control" id="exampleInputEmail1" placeholder="">
+                    </div>
+                <!-- /.form-group -->
+                <div>
+                  <label for="exampleInputEmail1" class="pt-2">Price *</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="">
                 </div>
-                <!-- /.card -->
-    
-           
+                <!-- /.form-group -->
+                <!-- /.phone-number -->
+                <div>
+                    <label for="exampleInputEmail1" class="pt-2">Valid Number of Days</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
+                  </div>
+                <div>
+                    <label for="exampleInputEmail1" class="pt-2">Allowed Amenities per Listing *</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
+                  </div>
+                <div>
+                    <label for="exampleInputEmail1" class="pt-2">Allowed Videos per Listing *</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
+                  </div>
+                <div>
+                    <label for="exampleInputEmail1" class="pt-2">Allowed Additional Features per Listing *</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
+                  </div>
+                <div>
+                    <label for="exampleInputEmail1" class="pt-2">Order</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
+                  </div>
               </div>
-                 <!-- table data -->
+              </div>
+              
+              <!-- /.col -->
+           
+              <div class="col-md-6">
+                <div>
+                  <label for="exampleInputEmail1" class="pt-2">Name *</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="">
+                </div>
+                <!--Select -->
+                <div>
+                  <label class="pt-2">Discount Price *</label>
+                  <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected">Manager</option>
+                    <option>Shopkeeper</option>
+                  </select>
+                </div>
+                <!--Select -->
+                <div>
+                    <label for="exampleInputEmail1" class="pt-2">Allowed Listings *</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
+                  </div>
+                
+                    <div>
+                        <label for="exampleInputEmail1" class="pt-2">Allowed Photos per Listing *</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
+                    </div>
+              
+               
+                    <div>
+                        <label for="exampleInputEmail1" class="pt-2">Allowed Social Items per Listing *</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
+                    </div>
+                  
+              
+                    <div>
+                        <label for="exampleInputEmail1" class="pt-2">Allow Featured Listing? *</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
+                    </div>
+                  
+                
+                    <div>
+                        <label for="exampleInputEmail1" class="pt-2">Special Offer Label</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
+                    </div>
+                  
               </div>
             </div>
-                 <!-- our section -->
-   
+            <label for="">Labels *</label>
+            <div class="input-container"></div>
+            <div class="mb-4 rounded-">
+                <a type="button" id="addInputBtn" class="btn btn-info mt-2">Add Label</a>
+
+
+            </div>
+            <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+            </div>
+      </div> 
+    </section>
+    
   </div>
-  <!-- main -->
- 
+  
+
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<script src="../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- pace-progress -->
-<script src="../../plugins/pace-progress/pace.min.js"></script>
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Select2 -->
+<script src="../plugins/select2/js/select2.full.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
+<script src="../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
+<script src="../dist/js/demo.js"></script>
+<!-- Page specific script -->
+<script>
+  $(function () {
+    //Initialize Select2 Elements
+    $('.select2').select2()
+    // Function to remove input field
+    function removeInputField(inputGroup) {
+        inputGroup.remove();
+    }
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-
+    // Add input field when button is clicked
+    $('#addInputBtn').click(function() {
+        var inputGroup = $('<div>').addClass('input-group mt-2');
+        var input = $('<input>').attr({
+            type: 'text',
+            class: 'form-control',
+            placeholder: 'labels'
+        });
+        var inputGroupAppend = $('<div>').addClass('input-group-append');
+        var trashIcon = $('<button>').addClass('btn btn-danger').attr({
+            type: 'button',
+            title: 'Remove',
+        }).append($('<i>').addClass('fa fa-trash')).click(function() {
+            removeInputField(inputGroup);
+        });
+        
+        inputGroup.append(input);
+        inputGroupAppend.append(trashIcon);
+        inputGroup.append(inputGroupAppend);
+        
+        $('.input-container').append(inputGroup);
+    });
+    
+  })
+  // DropzoneJS Demo Code End
+</script>
+</body>
 </html>

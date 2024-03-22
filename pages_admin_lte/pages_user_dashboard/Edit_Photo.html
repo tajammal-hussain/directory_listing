@@ -8,7 +8,7 @@
         content="width=device-width, initial-scale=1"
     ></meta>
 
-    <title>AdminLTE 3 | DataTables</title>
+    <title>AdminLTE 3 | Blogs</title>
 
     <!-- Google Font: Source Sans Pro -->
 
@@ -47,6 +47,7 @@
         rel="stylesheet"
         href="../../dist/css/adminlte.min.css"
     ></link>
+
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -1544,7 +1545,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Pending Comments</h1>
+                            <h1>Photo</h1>
                         </div>
 
                         <div class="col-sm-6">
@@ -1553,7 +1554,7 @@
                                     <a href="#">Home</a>
                                 </li>
 
-                                <li class="breadcrumb-item active">Pending Comments</li>
+                                <li class="breadcrumb-item active">Photo</li>
                             </ol>
                         </div>
                     </div>
@@ -1569,150 +1570,43 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <!-- /.card-header -->
-
                                 <div class="card-body">
-                                    <div class="tab-content">
-                                        <div
-                                            class="tab-pane active"
-                                            id="tab_1"
-                                        >
-                                            <!-- card-header -->
-
-                                            <div class="card-tools">
-                                               
-                                            </div>
-
-                                            <table
-                                                id="example2"
-                                                class="table table-bordered table-hover"
-                                            >
-                                                <thead>
-                                                    <tr>
-                                                        <th>Serial</th>
-
-                                                        <th>Photo</th>
-
-                                                        <th>Title</th>
-
-                                                        <th>Category</th>
-
-                                                        <th>Action</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-
-                                                        <td>Test 1</td>
-
-                                                        <td>Test 1</td>
-
-                                                        <td>Test 1</td>
-
-                                                        <td class="project-actions text-left">
-                                                            <a
-                                                                class="btn btn-info btn-sm"
-                                                                href="#"
-                                                            >
-                                                                <i class="fas fa-pencil-alt"></i>
-                                                            </a>
-
-                                                            <a
-                                                                class="btn btn-danger btn-sm"
-                                                                href="#"
-                                                            >
-                                                                <i class="fas fa-trash"></i>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>2</td>
-
-                                                        <td>Test 2</td>
-
-                                                        <td>Test 2</td>
-
-                                                        <td>Test 2</td>
-
-                                                        <td class="project-actions text-left">
-                                                            <a
-                                                                class="btn btn-info btn-sm"
-                                                                href="#"
-                                                            >
-                                                                <i class="fas fa-pencil-alt"></i>
-                                                            </a>
-
-                                                            <a
-                                                                class="btn btn-danger btn-sm"
-                                                                href="#"
-                                                            >
-                                                                <i class="fas fa-trash"></i>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-
-                                        <!-- /.tab-pane -->
-
-
-                                        <!-- /.tab-pane -->
+                                    
+                                    <div class="col-sm-6 ml-3">
+                                      <label>Existing Photo</label><br/>
+                                      <img src="../../dist/img/user2-160x160.jpg" class="img elevation-2" alt="User Image"> <br>                    
+                                      <label class="py-2">Change Photo</label><br/>
+                                      <input type="file" class="rounded"/><br>
+                                      <button class="btn btn-primary mt-2">Update</button>
                                     </div>
-
-                                    <!-- /.tab-content -->
                                 </div>
-
-                                <!-- /.card-body -->
                             </div>
 
-                            <!-- /.card -->
+                            <!-- /.card-body -->
                         </div>
 
-                        <!-- /.col -->
+                        <!-- /.card -->
                     </div>
 
-                    <!-- /.row -->
+                    <!-- /.col -->
                 </div>
 
-                <!-- /.container-fluid -->
+                <!-- /.row -->
             </section>
-
-            <!-- /.content -->
         </div>
 
-        <!-- /.content-wrapper -->
-
-        <footer class="main-footer">
-            <div class="float-right d-none d-sm-block">
-                <b>Version</b>
-
-                3.2.0
-            </div>
-
-            <strong>
-                Copyright &copy; 2014-2021
-
-                <a href="https://adminlte.io">AdminLTE.io</a>
-
-                .
-            </strong>
-
-            All rights reserved.
-        </footer>
-
-        <!-- Control Sidebar -->
-
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-        </aside>
-
-        <!-- /.control-sidebar -->
+        <!-- /.container-fluid -->
+        <!-- /.content -->
     </div>
 
+    <!-- /.content-wrapper -->
+    <!-- Control Sidebar -->
+
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+
+    <!-- /.control-sidebar -->
     <!-- ./wrapper -->
     <!-- jQuery -->
     <script src="../../plugins/jquery/jquery.min.js"></script>
@@ -1739,20 +1633,20 @@
 
     <script>
         $(function () {
-      $("#example1").DataTable({
-        "responsive": true, "lengthChange": false, "autoWidth": false,
-        "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-      $('#example2').DataTable({
-        "paging": true,
-        "lengthChange": true,
-        "searching": true,
-        "ordering": true,
-        "info": true,
-        "autoWidth": false,
-        "responsive": true,
-      });
-    });
+            $("#example1").DataTable({
+                "responsive": true, "lengthChange": true, "autoWidth": true
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": true,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+                "autoWidth": true,
+                "responsive": true,
+            });
+        });
     </script>
 </body>
 </html>
+
