@@ -2,6 +2,29 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::view('/', 'welcome');
+
+Route::view('dashboard', 'dashboard')
+    ->middleware(['auth', 'verified', 'normal'])
+    ->name('dashboard');
+
+Route::view('admin', 'admin')
+    ->middleware(['auth', 'verified', 'admin'])
+    ->name('admin');
+
+Route::view('superadmin', 'superadmin')
+    ->middleware(['auth', 'verified', 'superadmin'])
+    ->name('superadmin');
+
+Route::view('main', 'main')->middleware(['auth','verified','main'])->name('main');
+
+Route::view('profile', 'profile')
+    ->middleware(['auth'])
+    ->name('profile');
+
+require __DIR__.'/auth.php';
+
+
 Route::get('/', function () {
     return view('pages.dashboard');
 })->name('dashboard');
@@ -244,11 +267,4 @@ Route::get('/all_listing', function () {
 Route::get('/packages', function () {
     return view('pages.user.packages');
 })->name('packages');
-
-
-
-
-
-
-
 
