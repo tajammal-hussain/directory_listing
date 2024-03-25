@@ -209,6 +209,50 @@ Route::get('/add_customer', function () {
     return view('pages.add_customer');
 })->name('add_customer');
 
+Route::get('/user_dashboard', function () {
+    return view('pages.user.user-dashboard');
+})->name('user_dashboard');
+
+Route::get('/wishlist', function () {
+    return view('pages.user.wishlist');
+})->name('wishlist');
+
+Route::get('/edit_banner', function () {
+    return view('pages.user.edit-banner');
+})->name('edit_banner');
+
+Route::get('/edit_photo', function () {
+    return view('pages.user.edit-photo');
+})->name('edit_photo');
+
+Route::get('/edit_password', function () {
+    return view('pages.user.edit-password');
+})->name('edit_password');
+
+Route::get('/edit_profile', function () {
+    return view('pages.user.edit-profile');
+})->name('edit_profile');
+
+Route::get('/purch_history', function () {
+    return view('pages.user.purchase-history');
+})->name('purch_history');
+
+Route::get('/all_listing', function () {
+    return view('pages.user.all-listing');
+})->name('all_listing');
+
+Route::get('/packages', function () {
+    return view('pages.user.packages');
+})->name('packages');
+
+Route::get('/a', function () {
+    return view('pages.user.new');
+})->name('a');
+
+
+
+
+
 
 
 
