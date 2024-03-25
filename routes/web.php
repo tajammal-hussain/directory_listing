@@ -245,10 +245,6 @@ Route::get('/packages', function () {
     return view('pages.user.packages');
 })->name('packages');
 
-Route::get('/a', function () {
-    return view('pages.user.new');
-})->name('a');
-
 
 
 
